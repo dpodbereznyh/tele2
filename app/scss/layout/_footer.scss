@@ -1,0 +1,29 @@
+.footer {
+  padding: 34px 0;
+  background: $dark;
+  &__title {
+    color: $light;
+  }
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+  }
+  &__contacts_icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 16px;
+  }
+  &__contacts_link {
+    color: $light;
+    transition: .35s;
+    &:hover {
+      color: $secondary1;
+      transition: .35s;
+    }
+  }
+}
