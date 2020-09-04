@@ -1,0 +1,513 @@
+.section {
+  padding: 64px 0;
+  &__title {
+    margin-bottom: 32px;
+  }
+  &__description {
+    margin-bottom: 32px;
+  }
+}
+/*****Header*****/
+.header {
+  padding-top: 32px;
+  background: $dark;
+  &__logo {
+    width: 159px;
+    height: auto;
+    //padding: 13px 0;
+    display: block;
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+  }
+}
+
+
+.main-nav {
+  display: block;
+}
+.main-nav:after {
+  clear: both;
+  content: "\00a0";
+  display: block;
+  height: 0;
+  font: 0px/0 serif;
+  overflow: hidden;
+}
+
+#main-menu-state:checked~#main-menu {
+  display: block;
+}
+#main-menu {
+  display: block;
+  clear: both;
+  li {
+    display: flex;
+    align-items: center;
+  }
+}
+.sm::after {
+  content: "";
+  display: block;
+  height: 0;
+  font: 0/0 serif;
+  clear: both;
+  overflow: hidden;
+}
+
+@media (min-width: 1100px) {
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-nav:after {
+    display: none;
+  }
+  #main-menu {
+    display: flex!important;
+    max-width: 859px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    //float: right;
+    //clear: none;
+  }
+  .sm::after {
+    content: "";
+    display: none;
+    height: 0;
+    font: 0/0 serif;
+    clear: both;
+    overflow: hidden;
+  }
+  #main-menu-state:checked~#main-menu {
+    display: flex!important;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.nav-brand {
+  float: left;
+}
+/* Mobile menu toggle button */
+
+.main-menu-btn {
+  float: right;
+  margin: 6px 10px;
+  position: relative;
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  text-indent: 29px;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* hamburger icon */
+
+.main-menu-btn-icon,
+.main-menu-btn-icon:before,
+.main-menu-btn-icon:after {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  height: 2px;
+  width: 24px;
+  background: $light;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.main-menu-btn-icon:before {
+  content: '';
+  top: -7px;
+  left: 0;
+}
+
+.main-menu-btn-icon:after {
+  content: '';
+  top: 7px;
+  left: 0;
+}
+
+
+/* x icon */
+
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon {
+  height: 0;
+  background: transparent;
+}
+
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* hide menu state checkbox (keep it visible to screen readers) */
+
+#main-menu-state {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+/* hide the menu in mobile view */
+
+#main-menu-state:not(:checked) ~ #main-menu {
+  display: none;
+}
+
+#main-menu-state:checked ~ #main-menu {
+  display: block;
+}
+
+@media (min-width: 1100px) {
+  /* hide the button in desktop view */
+  .main-menu-btn {
+    position: absolute;
+    top: -99999px;
+  }
+  /* always show the menu in desktop view */
+  #main-menu-state:not(:checked) ~ #main-menu {
+    display: block;
+  }
+}
+/*****Header End*****/
+
+/*****Move*****/
+.move {
+  &__image_wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transform: translate(0, -43%);
+  }
+}
+/*****Move End*****/
+/*****Location*****/
+.location {
+  padding: 38px 0;
+  background: url("../img/location/location-bg.jpg") no-repeat center center/cover;
+  &__nav {
+    margin-left: auto;
+    padding: 32px;
+    max-width: 642px;
+    background: $dark;
+  }
+  &__nav_title {
+    color: $light;
+  }
+  &__nav_description {
+    color: $light;
+    margin-bottom: 32px;
+  }
+  &__swiper-container {
+    margin-bottom: 32px;
+  }
+  &__swiper-slide-link {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    transition: .35s;
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5) url("../img/location/slider/search.svg") no-repeat center center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: .35s;
+      opacity: 0;
+    }
+    &:hover.location__swiper-slide-link::after {
+      transition: .35s;
+      opacity: 1;
+    }
+  }
+  &__btn {
+    margin: 0 auto;
+  }
+}
+/*****Location End*****/
+
+/*****Timetable-desktop*****/
+.timetable {
+  margin-bottom: 64px;
+  &__description {
+    max-width: 630px;
+    margin-bottom: 32px;
+  }
+}
+.date {
+  &__slider {
+    max-width: 231px;
+    position: relative;
+    margin: 0 auto 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__swiper-slide-text {
+    text-align: center;
+  }
+  &__slider_button {
+    width: 16px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    outline: none;
+    cursor: pointer;
+  }
+  &__button-prev {
+    left: 0;
+    transform: translate(-100%, -50%);
+    z-index: 2;
+  }
+  &__button-next {
+    right: 0;
+    transform: translate(100%, -50%);
+    z-index: 2;
+  }
+}
+
+.table {
+  &__title {
+    color: $secondary1;
+    padding-bottom: 48px;
+  }
+  &__head {
+    margin-bottom: 48px;
+  }
+  &__body_item {
+    padding-bottom: 48px;
+  }
+  &__title_time {
+    width: 28%;
+  }
+  &__title_event {
+    width: 44%;
+  }
+  &__title_location {
+    width: 27%;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $dark;
+    transition: .35s;
+    &:hover {
+      color: $secondary1;
+      transition: .35s;
+    }
+  }
+  &__icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 16px;
+  }
+}
+/*****Timetable-desktop End*****/
+
+/*****Speakers*****/
+.speakers {
+  background: $dark;
+  transform: skewY(-4deg);
+  width: 100%;
+  padding: 118px 0;
+  margin-bottom: 64px;
+  >.container-fluid {
+    transform: skewY(4deg);
+  }
+  &__title {
+    color: $light;
+  }
+  &__description {
+    color: $light;
+  }
+  &__slider {
+    position: relative;
+    width: 100%;
+  }
+  &__slide {
+    background: $light;
+  }
+  &__slide_image {
+  }
+  &__slide_desc_wrap {
+    background: $light;
+    padding: 32px;
+  }
+  &__slide_title {
+    margin-bottom: 8px;
+    color: $dark;
+  }
+  &__slide_description {
+    margin-bottom: 16px;
+    color: $secondary1;
+  }
+  &__slide_btn {
+    margin: 0 auto;
+  }
+  &__slider_button {
+    width: 40px;
+    height: 51px;
+    position: absolute;
+    top: 50%;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: 60px;
+    }
+  }
+  &__button-prev {
+    left: -25px;
+    transform: translate(-100%, -50%);
+    z-index: 2;
+  }
+  &__button-next {
+    right: -25px;
+    transform: translate(100%, -50%);
+    z-index: 2;
+  }
+}
+/*****Speakers End*****/
+/*****Recommend*****/
+.recommend {
+  &__item {
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+    margin-bottom: 32px;
+  }
+  &__item_desc_wrap {
+    padding: 32px;
+  }
+  &__item_title {
+    margin-bottom: 16px;
+  }
+  &__item_description {
+    margin-bottom: 16px;
+  }
+  &__contacts_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  &__contacts_icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 16px;
+  }
+  &__contacts_text {
+    color: $dark;
+    text-decoration-line: underline;
+  }
+  &__contacts_link {
+    transition: .35s;
+    &:hover {
+      color: $secondary1;
+      transition: .35s;
+    }
+  }
+}
+/*****Recommend End*****/
+
+/*****FAQ*****/
+.faq {
+  &__item {
+    padding: 32px;
+    margin-bottom: 32px;
+    background: $dark;
+    transition: .5s;
+  }
+  &__item-active {
+    background: $secondary1;
+    transition: .5s;
+  }
+  &__item_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  &__item_title {
+    color: $light;
+
+  }
+  &__item_description {
+    margin-top: 32px;
+    color: $dark;
+    display: none;
+  }
+  &__item_description-active {
+    display: block;
+
+  }
+}
+.icon-faq-arrow-icon {
+  width: 14px;
+  height: 7px;
+  border: 1px solid #fff;
+  position: relative;
+}
+.icon-faq-arrow-icon:before {
+  content: "\e902";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 55555;
+  font-size: 25px;
+}
+.icon-faq-arrow {
+  color: $light;
+  font-size: 10px;
+  transform: rotate(180deg);
+  transition: .35s;
+}
+.icon-faq-arrow-active {
+  transform: rotate(360deg);
+  transition: .35s;
+  color: $dark;
+}
+/*****FAQ End*****/
+
+
+
+
+

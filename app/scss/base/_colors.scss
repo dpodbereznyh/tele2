@@ -1,0 +1,68 @@
+$light: #ffffff;
+$dark: #000000;
+$dark_1: lighten($dark, 5%);
+$dark_2: lighten($dark, 10%);
+$dark_3: lighten($dark, 20%);
+$dark_4: lighten($dark, 30%);
+$dark_5: lighten($dark, 40%);
+$dark_6: lighten($dark, 50%);
+$dark_7: lighten($dark, 60%);
+$dark_8: lighten($dark, 70%);
+$dark_9: lighten($dark, 80%);
+
+$secondary1: #C3E400;
+$secondary1_l1: lighten($secondary1, 10%);
+$secondary1_l2: lighten($secondary1, 30%);
+$secondary1_l3: lighten($secondary1, 40%);
+$secondary1_l4: lighten($secondary1, 45%);
+
+$secondary1_d1: darken($secondary1, 5%);
+$secondary1_d2: darken($secondary1, 10%);
+$secondary1_d3: darken($secondary1, 15%);
+$secondary1_d4: darken($secondary1, 20%);
+
+$secondary2: #FF6633;
+$secondary2_l1: lighten($secondary2, 5%);
+$secondary2_l2: lighten($secondary2, 10%);
+$secondary2_l3: lighten($secondary2, 20%);
+$secondary2_l4: lighten($secondary2, 30%);
+
+$secondary2_d1: darken($secondary2, 5%);
+$secondary2_d2: darken($secondary2, 10%);
+$secondary2_d3: darken($secondary2, 15%);
+$secondary2_d4: darken($secondary2, 20%);
+
+$secondary3: #C882FF;
+$secondary3_l1: lighten($secondary3, 5%);
+$secondary3_l2: lighten($secondary3, 10%);
+$secondary3_l3: lighten($secondary3, 15%);
+$secondary3_l4: lighten($secondary3, 20%);
+
+$secondary3_d1: darken($secondary3, 5%);
+$secondary3_d2: darken($secondary3, 10%);
+$secondary3_d3: darken($secondary3, 15%);
+$secondary3_d4: darken($secondary3, 20%);
+
+$secondary4: #FF59A3;
+$secondary4_l1: lighten($secondary4, 5%);
+$secondary4_l2: lighten($secondary4, 10%);
+$secondary4_l3: lighten($secondary4, 15%);
+$secondary4_l4: lighten($secondary4, 20%);
+
+$secondary4_d1: darken($secondary4, 5%);
+$secondary4_d2: darken($secondary4, 10%);
+$secondary4_d3: darken($secondary4, 15%);
+$secondary4_d4: darken($secondary4, 20%);
+
+$secondary5: #1EE7CA;
+$secondary5_l1: lighten($secondary5, 10%);
+$secondary5_l2: lighten($secondary5, 20%);
+$secondary5_l3: lighten($secondary5, 30%);
+$secondary5_l4: lighten($secondary5, 40%);
+
+$secondary5_d1: darken($secondary5, 5%);
+$secondary5_d2: darken($secondary5, 10%);
+$secondary5_d3: darken($secondary5, 15%);
+$secondary5_d4: darken($secondary5, 20%);
+
+

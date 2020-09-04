@@ -1,0 +1,14 @@
+.btn {
+  padding: 16px 32px;
+  background: $secondary1;
+  border-radius: 30px;
+  color: $dark;
+  transition: .35s;
+  width: fit-content;
+  display: block;
+  &:hover {
+    background: $secondary1_d3;
+    transition: .35s;
+    color: $dark;
+  }
+}

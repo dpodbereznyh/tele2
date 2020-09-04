@@ -1,0 +1,10 @@
+@import "../abstracts/mixins";
+
+@include font-face("Tele2DisplaySerif-Bold", "../fonts/Tele2DisplaySerif/Tele2DisplaySerif-Bold");
+@include font-face("Tele2DisplaySerif-Regular", "../fonts/Tele2DisplaySerif/Tele2DisplaySerif-Regular");
+@include font-face("Tele2TextSans-Bold", "../fonts/Tele2TextSans/Tele2TextSans-Bold");
+@include font-face("Tele2TextSans-Regular", "../fonts/Tele2TextSans/Tele2TextSans-Regular");
+@include font-face("StandardCTStencil-Bold", "../fonts/StandardStencil-Bold/StandardCTStencil-Bold");
+
+
+@include font-face("icomoon", "../fonts/icomoon/icomoon");
