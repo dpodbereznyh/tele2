@@ -140,6 +140,10 @@ var tableSlider = new Swiper ('.table__swiper-container', {
     thumbs: {
         swiper: dateSlider,
     },
+    navigation: {
+        nextEl: '.date__button-next',
+        prevEl: '.date__button-prev',
+    },
 
     // thumbs: {
     //     swiper: {
