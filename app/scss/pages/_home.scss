@@ -1,3 +1,157 @@
+/*****Main-Screen*****/
+.main-screen {
+  background: $dark;
+  padding: 32px 0 69px;
+  height: 100vh;
+  &__video_wrapper {
+    width: 100%;
+    position: relative;
+  }
+  &__video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__video__btn {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: $secondary1;
+    opacity: 0.85;
+    position: absolute;
+    outline: none;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:after {
+      content: "";
+      display: block;
+      width: 61px;
+      height: 69px;
+      background: url("../img/main-screen/video-play.svg") no-repeat center center/ cover;
+    }
+  }
+  &__form {
+    position: relative;
+    height: 100%;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -3%;
+      width: 1px;
+      height: 100%;
+      background: $light;
+    }
+  }
+  &__form_description {
+    margin-bottom: 25px;
+    color: $light;
+  }
+  &__form_title {
+    color: $light;
+    margin-bottom: 6px;
+  }
+  &__form_input {
+    padding: 8px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $light;
+    background: transparent;
+    margin-bottom: 32px;
+    color: $light;
+    &::placeholder {
+      font-family: "Tele2Text-Regular",sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 23px;
+      line-height: 32px;
+      color: $dark_7;
+    }
+  }
+  &__form_btn {
+    border: none;
+    margin: 0 auto;
+  }
+  &__form_second {
+    display: flex;
+    align-items: center;
+    height: inherit;
+  }
+  &__form_input-second {
+    margin-bottom: 16px;
+  }
+  &__form_second_wrap {
+    height: fit-content;
+    margin-bottom: 32px;
+  }
+  &__form_third-slogan-wrap {
+    margin-bottom: 32px;
+  }
+  &__form_third-slogan {
+    margin-bottom: 8px;
+  }
+  &__form_questions_title {
+    margin-bottom: 32px;
+    color: $light;
+  }
+  &__form_description {
+    margin-bottom: 32px;
+    color: $light;
+  }
+  &__form_questions-wrap {
+    margin-bottom: 32px;
+  }
+  &__form_questions_label {
+    width: 100%;
+    padding: 8px;
+    background: $light;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    outline: none;
+    border: none;
+    text-align: center;
+    color: $dark;
+    &::placeholder {
+      color: $dark;
+    }
+  }
+  &__form_questions_input {
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+  }
+}
+.main-screen__form_questions_label>input:checked+span {
+  color: $secondary1_d1;
+}
+.purple {
+  color: $secondary3;
+}
+.red {
+  color: $secondary2
+}
+.yellow {
+  color: $secondary1;
+}
+.green {
+  color: $secondary5;
+}
+.pink {
+  color: $secondary4;
+}
+/*****Main-Screen End*****/
+
+
+
 /*****Move*****/
 .move {
   &__image_wrap {
