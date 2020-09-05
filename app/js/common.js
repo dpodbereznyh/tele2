@@ -89,6 +89,7 @@ $(document).ready(function () {
     //Timetable
     $('.card-table').stacktable({
         headIndex: '0',
+
     });
 
     // FAQ

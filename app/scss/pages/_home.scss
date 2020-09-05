@@ -221,6 +221,13 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 45px;
+    padding-top: 32px;
+  }
+
+  tbody {
+    tr.table__body_row:nth-child(3n+4) {
+      border-bottom: 0.5px solid $dark_7;
+    }
   }
 }
 @media screen and (max-width: 768.5px) {
@@ -248,12 +255,33 @@
 @media screen and (max-width: 577.5px) {
   .st-key {
     font-size: 18px;
+    padding-bottom: 16px;
   }
   .st-val {
     font-size: 20px;
+    padding-bottom: 16px;
   }
   .table__address {
     font-size: 20px;
+    line-height: 28px;
+  }
+  .table__icon {
+    min-width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .table__body_item-time {
+    padding-top: 16px;
+  }
+  .date__slider {
+    margin-bottom: 16px;
   }
 }
 
