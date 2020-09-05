@@ -137,6 +137,10 @@ var tableSlider = new Swiper ('.table__swiper-container', {
     slideClass: 'table__slide',
     wrapperClass: 'table__wrapper',
     slidesPerView: 1,
+    thumbs: {
+        swiper: dateSlider,
+    },
+
     // thumbs: {
     //     swiper: {
     //
