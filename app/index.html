@@ -47,10 +47,10 @@
     </div>
 </header>
 <main class="main">
-    <div class="section move">
+    <!--<div class="section move">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="order-2 order-md-1 col-md-6 col-lg-8">
                     <h2 class="section__title StencilH1">
                         ДЕЙСТВУЙ
                     </h2>
@@ -58,12 +58,8 @@
                         Запомни это слово. Это главный мотиватор для тебя и твоей команды. “Действуй” - генератор развития скиллов. Проходи квест в Telegram, участвуй в заданиях, прокачивай навыки и получай баллы!
                     </p>
                 </div>
-                <div class="col-lg-4">
-                    <div class="move__image_wrap">
-                        <div class="move__image">
-                            <img src="../img/move/move-image.png" alt="phone">
-                        </div>
-                    </div>
+                <div class="order-1 offset-2 col-8 offset-sm-3 col-sm-6 order-md-2 offset-md-0 col-md-6 col-lg-4">
+                    <img class="move__image" src="../img/move/move-image.png" alt="phone">
                 </div>
             </div>
         </div>
@@ -110,13 +106,24 @@
                             </a>
                         </div>
                     </div>
+                    <div class="location__slider_button_wrap">
+                        <div class="swiper-button-prev location__button-prev location__slider_button">
+                            <span class="icon-Prev"></span>
+                        </div>
+                        <div class="swiper-button-next location__button-next location__slider_button">
+                            <span class="icon-Next"></span>
+                        </div>
+                    </div>
                 </div>
                 <a href="#" class="location__btn btn TextP">
                     Показать на карте
                 </a>
             </div>
+            <a href="#" class="location__btn-mobile btn TextP">
+                Показать на карте
+            </a>
         </div>
-    </section>
+    </section>-->
     <section class="section timetable">
         <div class="container-fluid">
             <h2 class="section__title StencilH1">
@@ -153,23 +160,23 @@
                         <table class="table card-table">
                             <thead class="table__head">
                             <tr>
-                                <th class="table__title table__title_time DisplayH6 ">
+                                <th class="table__title table__title_time">
                                     Время
                                 </th>
-                                <th class="table__title table__title_event DisplayH6">
+                                <th class="table__title table__title_event">
                                     Событие
                                 </th>
-                                <th class="table__title table__title_location DisplayH6">
+                                <th class="table__title table__title_location">
                                     Локация
                                 </th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr >
-                                <td class="table__body_item TextH1B">
+                                <td class="table__body_item table__body_item-time">
                                     09:00 - ...
                                 </td>
-                                <td class="table__body_item TextH1">
+                                <td class="table__body_item table__body_item-event">
                                     Прилет участников
                                 </td>
                                 <td class="table__body_item">
@@ -177,17 +184,17 @@
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
-                                        <p class="table__address TextH1">
+                                        <p class="table__address">
                                             Аэропорт Адлер
                                         </p>
                                     </a>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="table__body_item TextH1B">
+                                <td class="table__body_item table__body_item-time">
                                     09:00 - ...
                                 </td>
-                                <td class="table__body_item TextH1">
+                                <td class="table__body_item table__body_item-event">
                                     Трансферы в гостиницу
                                 </td>
                                 <td class="table__body_item">
@@ -195,17 +202,17 @@
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
-                                        <p class="table__address TextH1">
+                                        <p class="table__address">
                                             Адлер - Сочи
                                         </p>
                                     </a>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="table__body_item TextH1B">
+                                <td class="table__body_item table__body_item-time">
                                     09:00 - ...
                                 </td>
-                                <td class="table__body_item TextH1">
+                                <td class="table__body_item table__body_item-event">
                                     Cheсk-in в гостиницу и заселение
                                 </td>
                                 <td class="table__body_item">
@@ -220,10 +227,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="TextH1B">
+                                <td class="table__body_item table__body_item-time">
                                     19:00 - 23:00
                                 </td>
-                                <td class="TextH1">
+                                <td class="table__body_item table__body_item-event">
                                     Welcome-ужин
                                 </td>
                                 <td>
@@ -231,7 +238,7 @@
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
-                                        <p class="table__address TextH1">
+                                        <p class="table__address">
                                             Swissotel «Камелия»
                                         </p>
                                     </a>
@@ -244,23 +251,23 @@
                         <table class="table card-table">
                             <thead class="table__head">
                             <tr>
-                                <th class="table__title table__title_time DisplayH6 ">
+                                <th class="table__title table__title_time">
                                     Время
                                 </th>
-                                <th class="table__title table__title_event DisplayH6">
+                                <th class="table__title table__title_event">
                                     Событие
                                 </th>
-                                <th class="table__title table__title_location DisplayH6">
+                                <th class="table__title table__title_location">
                                     Локация
                                 </th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr >
-                                <td class="table__body_item TextH1B">
+                                <td class="table__body_item table__body_item-time">
                                     09:00 - ...
                                 </td>
-                                <td class="table__body_item TextH1">
+                                <td class="table__body_item table__body_item-event">
                                     Прилет участников
                                 </td>
                                 <td class="table__body_item">
@@ -275,10 +282,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="table__body_item TextH1B">
+                                <td class="table__body_item table__body_item-time">
                                     09:00 - ...
                                 </td>
-                                <td class="table__body_item TextH1">
+                                <td class="table__body_item table__body_item-event">
                                     Трансферы в гостиницу
                                 </td>
                                 <td class="table__body_item">
@@ -286,17 +293,17 @@
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
-                                        <p class="table__address TextH1">
+                                        <p class="table__address">
                                             Адлер - Сочи
                                         </p>
                                     </a>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="table__body_item TextH1B">
+                                <td class="table__body_item table__body_item-time">
                                     09:00 - ...
                                 </td>
-                                <td class="table__body_item TextH1">
+                                <td class="table__body_item table__body_item-event">
                                     Cheсk-in в гостиницу и заселение
                                 </td>
                                 <td class="table__body_item">
@@ -304,17 +311,17 @@
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
-                                        <p class="table__address TextH1">
+                                        <p class="table__address">
                                             Swissotel «Камелия»
                                         </p>
                                     </a>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="TextH1B">
+                                <td class="table__body_item table__body_item-time">
                                     19:00 - 23:00
                                 </td>
-                                <td class="TextH1">
+                                <td class="table__body_item table__body_item-event">
                                     Welcome-ужин
                                 </td>
                                 <td>
@@ -322,7 +329,7 @@
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
-                                        <p class="table__address TextH1">
+                                        <p class="table__address">
                                             Swissotel «Камелия»
                                         </p>
                                     </a>
@@ -335,7 +342,7 @@
             </div>
         </div>
     </section>
-    <section class="section speakers">
+    <!--<section class="section speakers">
         <div class="container-fluid">
             <h2 class="section__title speakers__title StencilH1">
                 СПИКЕРЫ КОНФЕРЕНЦИИ
@@ -720,9 +727,9 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section>-->
 </main>
-<footer class="footer" id="footer">
+<!--<footer class="footer" id="footer">
     <div class="container-fluid">
         <div class="footer__wrap">
             <h5 class="footer__title DisplayH6">
@@ -738,7 +745,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer>-->
 
 
 <script src="js/scripts.min.js"></script>

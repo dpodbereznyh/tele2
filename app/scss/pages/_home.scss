@@ -6,12 +6,17 @@
     position: relative;
   }
   &__image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    transform: translate(0, -43%);
+    margin-top: -128px;
+  }
+}
+@media screen and (max-width: 1100.5px) {
+  .move__image {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 768.5px) {
+  .move__image {
+    margin-bottom: 32px;
   }
 }
 /*****Move End*****/
@@ -34,6 +39,7 @@
   }
   &__swiper-container {
     margin-bottom: 32px;
+    position: relative;
   }
   &__swiper-slide-link {
     display: block;
@@ -58,8 +64,39 @@
       opacity: 1;
     }
   }
+  &__slider_button_wrap {
+    width: 67px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
   &__btn {
     margin: 0 auto;
+  }
+  &__btn-mobile {
+    display: none;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 577.5px) {
+  .location {
+    padding: 38px 0 16px;
+  }
+  .location__swiper-wrapper {
+    margin-bottom: 16px;
+  }
+  .location__btn {
+    display: none;
+  }
+  .location__nav {
+    padding: 16px;
+    margin-bottom: 151px;
+  }
+  .location__swiper-container {
+    margin-bottom: 0;
+  }
+  .location__btn-mobile {
+    display: block;
   }
 }
 /*****Location End*****/
@@ -106,6 +143,11 @@
 
 .table {
   &__title {
+    font-family: "Tele2DisplaySerif-Bold", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 31px;
+    line-height: 44px;
     color: $secondary1;
     padding-bottom: 48px;
   }
@@ -114,6 +156,21 @@
   }
   &__body_item {
     padding-bottom: 48px;
+  }
+  &__body_item-time {
+    padding-bottom: 48px;
+    font-family: Tele2TextSans-Bold,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 45px;
+  }
+  &__body_item-event {
+    font-family: "Tele2TextSans-Regular", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 45px;
   }
   &__title_time {
     width: 28%;
@@ -135,11 +192,27 @@
     }
   }
   &__icon {
-    width: 30px;
+    min-width: 30px;
     height: 30px;
     margin-right: 16px;
   }
+  &__address {
+    font-family: "Tele2TextSans-Regular", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
 }
+.st-key {
+
+}
+@media screen and (max-width: 900.5px){
+
+}
+
+
 /*****Timetable-desktop End*****/
 
 /*****Speakers*****/

@@ -88,7 +88,7 @@ $(document).ready(function () {
 
     //Timetable
     $('.card-table').stacktable({
-        headIndex: "0",
+        headIndex: '0',
     });
 
     // FAQ
@@ -104,8 +104,20 @@ $(document).ready(function () {
 var locationSlider = new Swiper ('.location__swiper-container', {
     slideClass: 'location__swiper-slide',
     wrapperClass: 'location__swiper-wrapper',
-    slidesPerView: 3,
-    spaceBetween: 32,
+    navigation: {
+        nextEl: '.location__button-next',
+        prevEl: '.location__button-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 32
+        },
+        577: {
+            slidesPerView: 3,
+            spaceBetween: 32
+        }
+    }
 
 });
 
