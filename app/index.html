@@ -19,135 +19,191 @@
     <!--<meta property="og:type" content="website">-->
     <!--<meta property="og:url" content="https://ppc.apimedia">-->
     <!--<meta property="vk:image" content="assets/img/opengraph/vk_og.jpg">-->
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/f479533b40/tele2/style.css">
 </head>
 
 <body>
-<header class="header">
-    <div class="container-fluid">
-        <nav class="main-nav">
-            <input id="main-menu-state" type="checkbox" />
-            <label class="main-menu-btn" for="main-menu-state">
-                <span class="main-menu-btn-icon"></span>
-            </label>
-
-            <a href="/" class="header__logo">
-                <img src="../img/header/header-logo.svg" alt="Tele2">
-            </a>
-            <!-- Sample menu definition -->
-            <ul id="main-menu" class="sm sm-clean">
-                <li><a href="#" class="DisplaySmall">Регистрация</a></li>
-                <li><a href="#" class="DisplaySmall">Локация</a></li>
-                <li><a href="#" class="DisplaySmall">Расписание</a></li>
-                <li><a href="#" class="DisplaySmall">Спикеры</a></li>
-                <li><a href="#" class="DisplaySmall">Рекомендуем</a></li>
-                <li><a href="#" class="DisplaySmall">FAQ</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 <main class="main">
-    <div class="main-screen">
+   <header class="header">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="main-screen__video_wrapper">
-                        <img src="../img/main-screen/main-screen-bg.jpg" alt="cover">
-                        <div class="main-screen__video">
-                            <button class="main-screen__video__btn"></button>
+            <nav class="main-nav">
+                <input id="main-menu-state" type="checkbox" />
+                <label class="main-menu-btn" for="main-menu-state">
+                    <span class="main-menu-btn-icon"></span>
+                </label>
+
+                <a href="/" class="header__logo">
+                    <img src="../img/header/header-logo.svg" alt="Tele2">
+                </a>
+                <ul id="main-menu" class="sm sm-clean">
+                    <li><a href="#" class="DisplaySmall">Регистрация</a></li>
+                    <li><a href="#" class="DisplaySmall">Локация</a></li>
+                    <li><a href="#" class="DisplaySmall">Расписание</a></li>
+                    <li><a href="#" class="DisplaySmall">Спикеры</a></li>
+                    <li><a href="#" class="DisplaySmall">Рекомендуем</a></li>
+                    <li><a href="#" class="DisplaySmall">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-screen">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="main-screen__video_wrapper">
+                            <img src="../img/main-screen/main-screen-bg.jpg" alt="cover">
+                            <div class="main-screen__video">
+                                <button data-src="https://www.youtube.com/embed/ZbrFZWnV_xs?autoplay=1" data-fancybox="" data-type="iframe" class="main-screen__video__btn"></button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="main-screen__form">
-                        <div class="main-screen__form_first d-none">
-                            <p class="main-screen__form_description TextP">
-                                Но для начала тебе нужно зарегистрироваться и определить свой уникальный скилл, который ты будешь прокачивать на протяжении всей Коммерческой конференции 2020. Об этом чуть позже, а сейчас заполни все поля.
-                            </p>
-                            <p class="main-screen__form_description TextP">
-                                Расширяй границы и достигай запредельных возможностей. Ставь дерзкие цели и принимай любые вызовы. Выход за рамки начнется именно здесь!
-                            </p>
-                            <p class="main-screen__form_title DisplayH6">
-                                Начало регистрации
-                            </p>
-                            <input type="tel" placeholder="Введи номер телефона" required class="main-screen__form_input">
-                            <button class="main-screen__form_btn btn TextP">
-                                Выйти за рамки
-                            </button>
-                        </div>
-                        <div class="main-screen__form_second d-none">
-                            <div class="main-screen__form_second_wrap">
-                                <input type="text" placeholder="Фамилия" required class="main-screen__form_input main-screen__form_input-second">
-                                <input type="text" placeholder="Имя" required class="main-screen__form_input main-screen__form_input-second">
-                                <input type="email" placeholder="Email" required class="main-screen__form_input main-screen__form_input-second">
-                                <input type="text" placeholder="Город" required class="main-screen__form_input">
+                    <div class="col-lg-4">
+                        <div class="main-screen__form">
+                            <div class="main-screen__form_first d-none">
+                                <p class="main-screen__form_description TextP">
+                                    Но для начала тебе нужно зарегистрироваться и определить свой уникальный скилл, который ты будешь прокачивать на протяжении всей Коммерческой конференции 2020. Об этом чуть позже, а сейчас заполни все поля.
+                                </p>
+                                <p class="main-screen__form_description TextP">
+                                    Расширяй границы и достигай запредельных возможностей. Ставь дерзкие цели и принимай любые вызовы. Выход за рамки начнется именно здесь!
+                                </p>
+                                <p class="main-screen__form_title DisplayH6">
+                                    Начало регистрации
+                                </p>
+                                <input type="tel" placeholder="Введи номер телефона" required class="main-screen__form_input">
                                 <button class="main-screen__form_btn btn TextP">
-                                    Регистрация
+                                    Выйти за рамки
                                 </button>
                             </div>
-                        </div>
-                        <div class="main-screen__form_third d-none">
-                            <div class="main-screen__form_third-slogan-wrap">
-                                <p class="main-screen__form_third-slogan StencilH3 purple">
-                                    МЕЧТАЙ СМЕЛО
+                            <div class="main-screen__form_second d-none">
+                                <div class="main-screen__form_second_wrap">
+                                    <input type="text" placeholder="Фамилия" required class="main-screen__form_input main-screen__form_input-second">
+                                    <input type="text" placeholder="Имя" required class="main-screen__form_input main-screen__form_input-second">
+                                    <input type="email" placeholder="Email" required class="main-screen__form_input main-screen__form_input-second">
+                                    <input type="text" placeholder="Город" required class="main-screen__form_input">
+                                    <button class="main-screen__form_btn btn TextP">
+                                        Регистрация
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="main-screen__form_third d-none">
+                                <div class="main-screen__form_third-slogan-wrap">
+                                    <p class="main-screen__form_third-slogan StencilH3 purple">
+                                        МЕЧТАЙ СМЕЛО
+                                    </p>
+                                    <p class="main-screen__form_third-slogan StencilH3 red">
+                                        ПРИМИ ВЫЗОВ
+                                    </p>
+                                    <p class="main-screen__form_third-slogan StencilH3 yellow">
+                                        СМОТРИ ПО-НОВОМУ
+                                    </p>
+                                    <p class="main-screen__form_third-slogan StencilH3 green">
+                                        БУДЬ ОТКРЫТЫМ
+                                    </p>
+                                    <p class="main-screen__form_third-slogan StencilH3 pink">
+                                        ДУМАЙ БЫСТРО
+                                    </p>
+                                </div>
+                                <p class="main-screen__form_description TextP">
+                                    Вся конференция — ода этим 5 скиллам. Они расширяют границы твоего сознания и позволяют действовать out of the box.
                                 </p>
-                                <p class="main-screen__form_third-slogan StencilH3 red">
-                                    ПРИМИ ВЫЗОВ
+                                <p class="main-screen__form_description TextP">
+                                    Хочешь узнать, какой скилл в твоей зоне развития? Тогда жми на кнопку «Пройти тест»‎. Отвечай честно и быстро!
                                 </p>
-                                <p class="main-screen__form_third-slogan StencilH3 yellow">
-                                    СМОТРИ ПО-НОВОМУ
+                                <button class="main-screen__form_btn btn TextP">
+                                    Пройти тест
+                                </button>
+                            </div>
+                            <div class="main-screen__form_questions d-none">
+                                <p class="main-screen__form_questions_title DisplayH6">
+                                    Вопрос 1 / 10
                                 </p>
-                                <p class="main-screen__form_third-slogan StencilH3 green">
-                                    БУДЬ ОТКРЫТЫМ
+                                <p class="main-screen__form_description TextH4">
+                                    Я без труда могу представить образ несуществующего предмета или явления.
                                 </p>
-                                <p class="main-screen__form_third-slogan StencilH3 pink">
+                                <div class="main-screen__form_questions-wrap">
+                                    <label class="main-screen__form_questions_label TextVerySmall">
+                                        <input type="radio" name="main-screen__form_questions" class="main-screen__form_questions_input">
+                                        <span>Да</span>
+                                    </label>
+                                    <label class="main-screen__form_questions_label TextVerySmall">
+                                        <input type="radio" name="main-screen__form_questions" class="main-screen__form_questions_input">
+                                        <span class="main-screen__form_questions_span TextVerySmall">Испытываю некоторые трудности</span>
+                                    </label>
+                                    <label class="main-screen__form_questions_label TextVerySmall">
+                                        <input type="radio" name="main-screen__form_questions" class="main-screen__form_questions_input">
+                                        <span>Не всегда</span>
+                                    </label>
+                                    <label class="main-screen__form_questions_label TextVerySmall">
+                                        <input type="radio" name="main-screen__form_questions" class="main-screen__form_questions_input">
+                                        <span>Нет</span>
+                                    </label>
+                                </div>
+                                <button class="main-screen__form_btn main-screen__form_btn-questions btn TextP">
+                                    Далее
+                                </button>
+                            </div>
+                            <div class="main-screen__form_questions d-none">
+                                <p class="main-screen__form_questions_title DisplayH6">
+                                    Вопрос 2 / 10
+                                </p>
+                                <div class="main-screen__form_questions_image">
+                                    <img src="../img/main-screen/main-screen-form/image 3.jpg" alt="image">
+                                </div>
+                                <p class="main-screen__form_description TextH4">
+                                    На этой картинке человек бежит к тебе или от тебя?
+                                </p>
+                                <div class="main-screen__form_questions-wrap">
+                                    <label class="main-screen__form_questions_label TextVerySmall">
+                                        <input type="radio" name="main-screen__form_questions" class="main-screen__form_questions_input">
+                                        <span>Ко мне</span>
+                                    </label>
+                                    <label class="main-screen__form_questions_label TextVerySmall">
+                                        <input type="radio" name="main-screen__form_questions" class="main-screen__form_questions_input">
+                                        <span class="main-screen__form_questions_span TextVerySmall">От меня</span>
+                                    </label>
+                                </div>
+                                <button class="main-screen__form_btn main-screen__form_btn-questions btn TextP">
+                                    Далее
+                                </button>
+                            </div>
+                            <div class="main-screen__form_final d-none">
+                                <p class="main-screen__form_final_title DisplayH6">
+                                    Спасибо за регистрацию, Сергей! Твой скилл:
+                                </p>
+                                <p class="main-screen__form_final_skill StencilH5">
                                     ДУМАЙ БЫСТРО
                                 </p>
+                                <p class="main-screen__form_description TextP">
+                                    Прокачивай его на конференции, но не забывай про остальные навыки. За развитие своего скилла ты получаешь двойной бонус.
+                                </p>
+                                <p class="main-screen__form_description TextP">
+                                    Как прокачать скилл? Участвуй во всех активностях, присылай доказательства выполнения заданий в Telegram и получай баллы. Награда ждёт тебя!
+                                </p>
+                                <ul class="main-screen__form_links">
+                                    <li class="main-screen__form_link main-screen__telegram order-2">
+                                        <a href="#" class="TextVerySmall">
+                                            Скачать Telegram
+                                        </a>
+                                    </li>
+                                    <li class="main-screen__form_link main-screen__google-play order-1">
+                                        <a href="#" >
+                                            <img src="../img/main-screen/main-screen-form/google-play.svg" alt="image">
+                                        </a>
+                                    </li>
+                                    <li class="main-screen__form_link main-screen__app-store order-3">
+                                        <a href="#">
+                                            <img src="../img/main-screen/main-screen-form/app-store.svg" alt="image">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <button class="main-screen__form_btn btn TextP">
+                                    Что дальше?
+                                </button>
                             </div>
-                            <p class="main-screen__form_description TextP">
-                                Вся конференция — ода этим 5 скиллам. Они расширяют границы твоего сознания и позволяют действовать out of the box.
-                            </p>
-                            <p class="main-screen__form_description TextP">
-                                Хочешь узнать, какой скилл в твоей зоне развития? Тогда жми на кнопку «Пройти тест»‎. Отвечай честно и быстро!
-                            </p>
-                            <button class="main-screen__form_btn btn TextP">
-                                Пройти тест
-                            </button>
-                        </div>
-                        <div class="main-screen__form_questions">
-                            <p class="main-screen__form_questions_title DisplayH6">
-                                Вопрос 1 / 10
-                            </p>
-                            <p class="main-screen__form_description TextH4">
-                                Я без труда могу представить образ несуществующего предмета или явления.
-                            </p>
-                            <div class="main-screen__form_questions-wrap">
-                                <label class="main-screen__form_questions_label TextVerySmall">
-                                    <input type="radio" name="main-screen__form_questions" class="main-screen__form_questions_input">
-                                    <span>Да</span>
-                                </label>
-                                <label class="main-screen__form_questions_label TextVerySmall">
-                                    <input type="radio" name="main-screen__form_questions" class="main-screen__form_questions_input">
-                                    <span class="main-screen__form_questions_span TextVerySmall">Испытываю некоторые трудности</span>
-                                </label>
-                                <label class="main-screen__form_questions_label TextVerySmall">
-                                    <input type="radio" name="main-screen__form_questions" class="main-screen__form_questions_input">
-                                    <span>Не всегда</span>
-                                </label>
-                                <label class="main-screen__form_questions_label TextVerySmall">
-                                    <input type="radio" name="main-screen__form_questions" class="main-screen__form_questions_input">
-                                    <span>Нет</span>
-                                </label>
-                            </div>
-                            <button class="main-screen__form_btn btn TextP">
-                                Далее
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
     <!--<div class="section move">
         <div class="container-fluid">
             <div class="row">
@@ -208,10 +264,10 @@
                         </div>
                     </div>
                     <div class="location__slider_button_wrap">
-                        <div class="swiper-button-prev location__button-prev location__slider_button">
+                        <div class="swiper-button-prev location__button-prev location__btn-mobile location__slider_button">
                             <span class="icon-Prev"></span>
                         </div>
-                        <div class="swiper-button-next location__button-next location__slider_button">
+                        <div class="swiper-button-next location__button-next location__btn-mobile location__slider_button">
                             <span class="icon-Next"></span>
                         </div>
                     </div>
@@ -538,8 +594,8 @@
             <p class="section__description TextH2">
                 Специально для тебя мы сделали подборку с проверенными местами, где ты сможешь перевести дух и зарядиться энергией для продуктивной работы
             </p>
-            <div class="row">
-                <div class="col-lg-4">
+            <div class="slider-container" data-mobile="false">
+                <div class="recommend__wrapper">
                     <div class="recommend__item">
                         <div class="recommend__item_image">
                             <img src="../img/recommend/recommend-image1.jpg" alt="image">
@@ -579,8 +635,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
                     <div class="recommend__item">
                         <div class="recommend__item_image">
                             <img src="../img/recommend/recommend-image1.jpg" alt="image">
@@ -620,8 +674,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
                     <div class="recommend__item">
                         <div class="recommend__item_image">
                             <img src="../img/recommend/recommend-image1.jpg" alt="image">
@@ -661,8 +713,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
                     <div class="recommend__item">
                         <div class="recommend__item_image">
                             <img src="../img/recommend/recommend-image1.jpg" alt="image">
@@ -702,8 +752,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
                     <div class="recommend__item">
                         <div class="recommend__item_image">
                             <img src="../img/recommend/recommend-image1.jpg" alt="image">
@@ -743,8 +791,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
                     <div class="recommend__item">
                         <div class="recommend__item_image">
                             <img src="../img/recommend/recommend-image1.jpg" alt="image">
@@ -784,7 +830,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+            </div>
             </div>
         </div>
     </section>

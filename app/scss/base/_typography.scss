@@ -68,7 +68,68 @@
   font-size: 22px;
   line-height: 31px;
 }
-
+@media screen and (max-width: 577.5px) {
+  .DisplayH1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 56px;
+  }
+  .DisplayH2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 51px;
+  }
+  .DisplayH3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 45px;
+  }
+  .DisplayH4 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 39px;
+  }
+  .DisplayH5 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 37px;
+  }
+  .DisplayH6 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .DisplayP{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 31px;
+  }
+  .DisplayStrong{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 31px;
+  }
+  .DisplaySmall{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .DisplayVerySmall{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 .TextH1{
   font-family: "Tele2TextSans-Regular", sans-serif;
   font-style: normal;

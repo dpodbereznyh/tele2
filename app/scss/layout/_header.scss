@@ -20,8 +20,9 @@
 }
 /*****Header*****/
 .header {
-  padding-top: 32px;
+  padding-top: 16px;
   background: $dark;
+  min-height: 100vh;
   &__logo {
     width: 159px;
     height: auto;

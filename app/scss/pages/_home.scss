@@ -1,8 +1,7 @@
 /*****Main-Screen*****/
 .main-screen {
   background: $dark;
-  padding: 32px 0 69px;
-  height: 100vh;
+  padding: 32px 0 32px;
   &__video_wrapper {
     width: 100%;
     position: relative;
@@ -120,6 +119,12 @@
     border: none;
     text-align: center;
     color: $dark;
+    cursor: pointer;
+    transition: .35s;
+    &:hover {
+      background: $secondary1;
+      transition: .35s;
+    }
     &::placeholder {
       color: $dark;
     }
@@ -129,15 +134,58 @@
     left: 0;
     visibility: hidden;
   }
+  &__form_btn-questions {
+    width: 219px;
+  }
+  &__form_questions_image {
+    margin-bottom: 32px;
+  }
+  &__form_final_title {
+    color: $light;
+    margin-bottom: 32px;
+  }
+  &__form_final_skill {
+    color: $secondary4;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  &__form_links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  &__form_link {
+    a {
+      width: 100%;
+      display: block;
+      color: $light;
+      transition: .35s;
+      &:hover {
+        color: $secondary1;
+        transition: .35s;
+      }
+    }
+  }
+  &__google-play {
+    max-width: 132px;
+  }
+  &__app-store {
+    max-width: 124px;
+  }
+  &__telegram {
+    width: 119px;
+    text-align: center;
+  }
 }
 .main-screen__form_questions_label>input:checked+span {
-  color: $secondary1_d1;
+  color: $secondary2;
 }
 .purple {
   color: $secondary3;
 }
 .red {
-  color: $secondary2
+  color: $secondary2;
 }
 .yellow {
   color: $secondary1;
@@ -497,22 +545,61 @@
     }
   }
   &__button-prev {
-    left: -25px;
+    left: -2%;
     transform: translate(-100%, -50%);
     z-index: 2;
   }
   &__button-next {
-    right: -25px;
+    right: -2%;
     transform: translate(100%, -50%);
     z-index: 2;
+  }
+}
+@media screen and (max-width: 1406.5px) {
+  .speakers__slider_button {
+    top: 100%;
+  }
+  .speakers__button-prev {
+    left: 50%;
+    transform: translate(-300%, 32px);
+    z-index: 2;
+  }
+  .speakers__button-next {
+    right: 50%;
+    transform: translate(300%, 32px);
+    z-index: 2;
+  }
+}
+@media screen and (max-width: 640.5px) {
+  .speakers__slider_button {
+    width: 18px;
+    height: 22px;
+  }
+  .speakers__slider_button span {
+    font-size: 27px;
+    }
+  .speakers__button-prev {
+    transform: translate(-200%, 32px);
+  }
+  .speakers__button-next {
+    transform: translate(200%, 32px);
   }
 }
 /*****Speakers End*****/
 /*****Recommend*****/
 .recommend {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__item {
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
     margin-bottom: 32px;
+    width: 32%;
+    margin-right: 2%;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
   &__item_desc_wrap {
     padding: 32px;
@@ -529,7 +616,7 @@
     margin-bottom: 4px;
   }
   &__contacts_icon {
-    width: 12px;
+    min-width: 12px;
     height: 12px;
     margin-right: 16px;
   }
@@ -543,6 +630,25 @@
       color: $secondary1;
       transition: .35s;
     }
+  }
+}
+@media screen and (max-width: 890.5px) {
+  .recommend__wrapper {
+    justify-content: space-around;
+  }
+  .recommend__item {
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+    margin-bottom: 32px;
+    width: 45%;
+    margin-right: 0;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .recommend__wrapper {
+    flex-wrap: nowrap;
   }
 }
 /*****Recommend End*****/
@@ -562,7 +668,7 @@
   }
   &__item_head {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     cursor: pointer;
   }
@@ -601,6 +707,7 @@
   font-size: 10px;
   transform: rotate(180deg);
   transition: .35s;
+  margin-top: 20px;
 }
 .icon-faq-arrow-active {
   transform: rotate(360deg);
