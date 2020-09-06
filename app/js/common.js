@@ -230,6 +230,7 @@ function initSliders () {
 			slideClass: 'date__slide',
 			wrapperClass: 'date__wrapper',
 			slidesPerView: 1,
+			threshold: 4,
 			// controller: {
 			// 	control: tableSlider,
 			// },
@@ -244,6 +245,7 @@ function initSliders () {
 			slideClass: 'table__slide',
 			wrapperClass: 'table__wrapper',
 			slidesPerView: 1,
+			threshold: 4,
 			// controller: {
 			// 	control: dateSlider,
 			// },
