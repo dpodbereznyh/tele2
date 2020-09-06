@@ -2,28 +2,18 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TELE2</title>
-    <!--<link rel="icon" href="../img/header/header-logo.svg">-->
-    <!--<link rel="apple-touch-icon" sizes="180x180" href="../img/header/apple-touch-icon.png">-->
-    <!--<link rel="icon" type="image/png" sizes="32x32" href="../img/header/favicon-32x32.png">-->
-    <!--<link rel="icon" type="image/png" sizes="16x16" href="../img/header/favicon-16x16.png">-->
-    <!--<link rel="shortcut icon" href="../img/header/favicon.ico">-->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">-->
+    <link rel="icon" href="/img/icon/favicon-196png.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/icon/favicon-180.png">
+    <link rel="shortcut icon" href="/img/icon/favicon-196png.png">
     <link rel="stylesheet" href="css/main.min.css">
-    <!--<meta property="og:title" content="Digital агентство «API Media»">-->
-    <!--<meta property="og:description" content="Эффективные цифровые решения для вашего бизнеса: создание и продвижение сайтов, контекстная реклама, сквозная аналитика, социальные сети, дизайн. ">-->
-    <!--<meta property="og:image" content="assets/img/opengraph/og.jpg">-->
-    <!--<meta property="og:type" content="website">-->
-    <!--<meta property="og:url" content="https://ppc.apimedia">-->
-    <!--<meta property="vk:image" content="assets/img/opengraph/vk_og.jpg">-->
 </head>
 
 <body>
 <main class="main">
-   <header class="header">
+   <header class="header" id="header">
         <div class="container-fluid">
             <nav class="main-nav">
                 <input id="main-menu-state" type="checkbox" />
@@ -35,12 +25,12 @@
                     <img src="../img/header/header-logo.svg" alt="Tele2">
                 </a>
                 <ul id="main-menu" class="sm sm-clean">
-                    <li><a href="#" class="DisplaySmall">Регистрация</a></li>
-                    <li><a href="#" class="DisplaySmall">Локация</a></li>
-                    <li><a href="#" class="DisplaySmall">Расписание</a></li>
-                    <li><a href="#" class="DisplaySmall">Спикеры</a></li>
-                    <li><a href="#" class="DisplaySmall">Рекомендуем</a></li>
-                    <li><a href="#" class="DisplaySmall">FAQ</a></li>
+                    <li><a href="#header" class="DisplaySmall yakor">Регистрация</a></li>
+                    <li><a href="#location" class="DisplaySmall yakor">Локация</a></li>
+                    <li><a href="#timetable" class="DisplaySmall yakor">Расписание</a></li>
+                    <li><a href="#speakers" class="DisplaySmall yakor">Спикеры</a></li>
+                    <li><a href="#recommend" class="DisplaySmall yakor">Рекомендуем</a></li>
+                    <li><a href="#faq" class="DisplaySmall yakor">FAQ</a></li>
                 </ul>
             </nav>
         </div>
@@ -145,7 +135,7 @@
                                     Вопрос 2 / 10
                                 </p>
                                 <div class="main-screen__form_questions_image">
-                                    <img src="../img/main-screen/main-screen-form/image 3.jpg" alt="image">
+                                    <img src="../img/main-screen/main-screen-form/image3.jpg" alt="image">
                                 </div>
                                 <p class="main-screen__form_description TextH4">
                                     На этой картинке человек бежит к тебе или от тебя?
@@ -164,9 +154,9 @@
                                     Далее
                                 </button>
                             </div>
-                            <div class="main-screen__form_final d-none">
+                            <div class="main-screen__form_final">
                                 <p class="main-screen__form_final_title DisplayH6">
-                                    Спасибо за регистрацию, Сергей! Твой скилл:
+                                    Спасибо за регистрацию,<br> Сергей! Твой скилл:
                                 </p>
                                 <p class="main-screen__form_final_skill StencilH5">
                                     ДУМАЙ БЫСТРО
@@ -178,12 +168,12 @@
                                     Как прокачать скилл? Участвуй во всех активностях, присылай доказательства выполнения заданий в Telegram и получай баллы. Награда ждёт тебя!
                                 </p>
                                 <ul class="main-screen__form_links">
-                                    <li class="main-screen__form_link main-screen__telegram order-2">
+                                    <li class="main-screen__form_link main-screen__telegram">
                                         <a href="#" class="TextVerySmall">
                                             Скачать Telegram
                                         </a>
                                     </li>
-                                    <li class="main-screen__form_link main-screen__google-play order-1">
+                                    <li class="main-screen__form_link main-screen__google-play">
                                         <a href="#" >
                                             <img src="../img/main-screen/main-screen-form/google-play.svg" alt="image">
                                         </a>
@@ -204,7 +194,7 @@
             </div>
         </div>
     </header>
-    <!--<div class="section move">
+    <div class="section move">
         <div class="container-fluid">
             <div class="row">
                 <div class="order-2 order-md-1 col-md-6 col-lg-8">
@@ -221,7 +211,7 @@
             </div>
         </div>
     </div>
-    <section class="location">
+    <section class="location" id="location">
         <div class="container__fluid">
             <div class="location__nav">
                 <h2 class="location__nav_title StencilH1">
@@ -281,7 +271,7 @@
             </a>
         </div>
     </section>
-    <section class="section timetable">
+    <section class="section timetable" id="timetable">
         <div class="container-fluid">
             <h2 class="section__title StencilH1">
                 РАСПИСАНИЕ
@@ -338,7 +328,7 @@
                                     Прилет участников
                                 </td>
                                 <td class="table__body_item ">
-                                    <a href="#" class="table__link">
+                                    <a href="#popup-map" class="table__link" data-fancybox="">
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
@@ -356,7 +346,7 @@
                                     Трансферы в гостиницу
                                 </td>
                                 <td class="table__body_item">
-                                    <a href="#" class="table__link">
+                                    <a href="#popup-map" data-fancybox="" class="table__link">
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
@@ -374,7 +364,7 @@
                                     Cheсk-in в гостиницу и заселение
                                 </td>
                                 <td class="table__body_item">
-                                    <a href="#" class="table__link">
+                                    <a href="#popup-map" data-fancybox="" class="table__link">
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
@@ -392,7 +382,7 @@
                                     Welcome-ужин
                                 </td>
                                 <td>
-                                    <a href="#" class="table__link">
+                                    <a href="#popup-map" data-fancybox="" class="table__link">
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
@@ -429,7 +419,7 @@
                                     Прилет участников
                                 </td>
                                 <td class="table__body_item ">
-                                    <a href="#" class="table__link">
+                                    <a href="#popup-map" data-fancybox="" class="table__link">
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
@@ -447,7 +437,7 @@
                                     Трансферы в гостиницу
                                 </td>
                                 <td class="table__body_item">
-                                    <a href="#" class="table__link">
+                                    <a href="#popup-map" data-fancybox="" class="table__link">
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
@@ -465,7 +455,7 @@
                                     Cheсk-in в гостиницу и заселение
                                 </td>
                                 <td class="table__body_item">
-                                    <a href="#" class="table__link">
+                                    <a href="#popup-map" data-fancybox="" class="table__link">
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
@@ -483,7 +473,7 @@
                                     Welcome-ужин
                                 </td>
                                 <td>
-                                    <a href="#" class="table__link">
+                                    <a href="#popup-map" class="table__link" data-fancybox="">
                                         <div class="table__icon">
                                             <img src="../img/location/location-icon.svg" alt="icon">
                                         </div>
@@ -500,7 +490,7 @@
             </div>
         </div>
     </section>
-    <section class="section speakers">
+    <section class="section speakers" id="speakers">
         <div class="container-fluid">
             <h2 class="section__title speakers__title StencilH1">
                 СПИКЕРЫ КОНФЕРЕНЦИИ
@@ -522,7 +512,7 @@
                                 <p class="speakers__slide_description DisplaySmall">
                                     Развитие В2В
                                 </p>
-                                <a href="#" class="speakers__slide_btn btn TextP" data-fancybox>
+                                <a href="#popup-form" class="speakers__slide_btn btn TextP" data-fancybox>
                                     Задать вопрос
                                 </a>
                             </div>
@@ -538,7 +528,7 @@
                                 <p class="speakers__slide_description DisplaySmall">
                                     Развитие В2В
                                 </p>
-                                <a href="#" class="speakers__slide_btn btn TextP" data-fancybox>
+                                <a href="#popup-form" class="speakers__slide_btn btn TextP" data-fancybox>
                                     Задать вопрос
                                 </a>
                             </div>
@@ -554,7 +544,7 @@
                                 <p class="speakers__slide_description DisplaySmall">
                                     Развитие В2В
                                 </p>
-                                <a href="#" class="speakers__slide_btn btn TextP" data-fancybox>
+                                <a href="#popup-form" class="speakers__slide_btn btn TextP" data-fancybox>
                                     Задать вопрос
                                 </a>
                             </div>
@@ -570,7 +560,7 @@
                                 <p class="speakers__slide_description DisplaySmall">
                                     Развитие В2В
                                 </p>
-                                <a href="#" class="speakers__slide_btn btn TextP" data-fancybox>
+                                <a href="#popup-form" class="speakers__slide_btn btn TextP" data-fancybox>
                                     Задать вопрос
                                 </a>
                             </div>
@@ -586,7 +576,7 @@
             </div>
         </div>
     </section>
-    <section class="section recommend">
+    <section class="section recommend" id="recommend">
         <div class="container-fluid">
             <h2 class="section__title StencilH1">
                 РЕКОМЕНДУЕМ
@@ -594,7 +584,7 @@
             <p class="section__description TextH2">
                 Специально для тебя мы сделали подборку с проверенными местами, где ты сможешь перевести дух и зарядиться энергией для продуктивной работы
             </p>
-            <div class="slider-container" data-mobile="false">
+            <div class="recommend-slider">
                 <div class="recommend__wrapper">
                     <div class="recommend__item">
                         <div class="recommend__item_image">
@@ -834,7 +824,7 @@
             </div>
         </div>
     </section>
-    <section class="section faq">
+    <section class="section faq" id="faq">
         <div class="container-fluid">
             <h2 class="section__title StencilH1">
                 FAQ
@@ -875,9 +865,9 @@
                 </li>
             </ul>
         </div>
-    </section>-->
+    </section>
 </main>
-<!--<footer class="footer" id="footer">
+<footer class="footer" id="footer">
     <div class="container-fluid">
         <div class="footer__wrap">
             <h5 class="footer__title DisplayH6">
@@ -893,8 +883,30 @@
             </div>
         </div>
     </div>
-</footer>-->
-
+</footer>
+<div class="d-none">
+    <form id="popup-form">
+        <div class="popup-form">
+            <p class="popup-form-title DisplaySmall">
+                Твой вопрос
+            </p>
+            <textarea class="popup-form-input TextH6" name="messege">Напиши, что хочешь спросить</textarea>
+            <div class="d-flex justify-content-center mt-4">
+                <button type="submit" class="popup-form__btn TextP">Отправить</button>
+            </div>
+        </div>
+    </form>
+    <div id="fancyalert" class="fancyalert">
+        <div class="fancyalert-text">Спасибо за заявку,<br> в ближайшее время с Вами свяжутся!</div>
+    </div>
+</div>
+<div class="d-none">
+    <div id="popup-map">
+        <div class="map">
+            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A053bd947d462cc1a45aeba4070defff75501905071c0eaf68436ac9976ec698c&amp;width=514&amp;height=326&amp;lang=ru_RU&amp;apikey=<API-ключ>"></script>
+        </div>
+    </div>
+</div>
 
 <script src="js/scripts.min.js"></script>
 

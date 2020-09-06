@@ -18,7 +18,7 @@ try {
 	$mail->Port = 465;
 	$mail->setFrom('no-reply@gridstudio.ru'); // Ваш Email
 	$mail->addAddress($recipient_mail1); // Email получателя
-	$mail->addAddress('id@apimedia.ru'); // Email получателя
+	$mail->addAddress('pdv@apimedia.ru'); // Email получателя
 }
 
 
@@ -28,7 +28,7 @@ catch (Exception $e) {
 
 
 
-$message = "<h1>APIMedia</h1>";
+$message = "<h1>Tele2</h1>";
 if (isset($_POST['name'])) {
 	$message .= "Имя: ".$_POST['name']."<br />";
 }
@@ -50,7 +50,7 @@ if (isset($_POST['title'])) {
 
 // Письмо
 $mail->isHTML(true);
-$mail->Subject = 'Заявка с сайта APIMedia'; // Заголовок письма
+$mail->Subject = 'Заявка с сайта Tele2'; // Заголовок письма
 $mail->Body = $message; // Текст письма
 $mail->CharSet = "utf-8";
 // Результат
