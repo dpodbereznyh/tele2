@@ -84,8 +84,7 @@ gulp.task('code', function() {
 gulp.task('es6', done => {
 	return script = gulp.src('./app/webpackJS/index.js')
 	.pipe(webpackStream({
-		// mode: config.production ? 'production' : 'development',
-		mode: 'development',
+		mode: 'production',
 		output: {
 			filename: 'bundle.min.js',
 		},
