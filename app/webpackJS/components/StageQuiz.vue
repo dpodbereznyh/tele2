@@ -118,8 +118,6 @@
 
 					this.$store.dispatch('setSkill', response.data.data.team.name);
 
-					console.log(typeof response.data.data.team.special_answer);
-
 					// Launch specail questions
 					if (response.data.data.team.special_answer) {
 						this.$store.dispatch('setStage', 4);

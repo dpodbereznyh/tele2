@@ -430,6 +430,7 @@
     }
   }
 }
+
 @media screen and (max-width: 890.5px) {
   .recommend__wrapper {
     justify-content: space-around;
@@ -443,6 +444,13 @@
       margin-right: 0;
     }
   }
+}
+@include media-breakpoint-down(xs) {
+	.recommend {
+		&__item {
+			width: 100%;
+		}
+	}
 }
 @media screen and (max-width: 640px) {
   .recommend__wrapper {

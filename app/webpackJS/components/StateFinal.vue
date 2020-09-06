@@ -14,17 +14,15 @@
 		</p>
 		<ul class="main-screen__form_links">
 			<li class="main-screen__form_link main-screen__telegram">
-				<a href="#" class="TextVerySmall">
-					Скачать Telegram
-				</a>
+				Скачать Telegram
 			</li>
 			<li class="main-screen__form_link main-screen__google-play">
-				<a href="#" >
+				<a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" target="_blank" rel="noopener noreferrer nofollow">
 					<img src="/assets/app/img/main-screen/main-screen-form/google-play.svg" alt="image">
 				</a>
 			</li>
 			<li class="main-screen__form_link main-screen__app-store order-3">
-				<a href="#">
+				<a href="https://apps.apple.com/ru/app/telegram-messenger/id686449807" target="_blank" rel="noopener noreferrer nofollow">
 					<img src="/assets/app/img/main-screen/main-screen-form/app-store.svg" alt="image">
 				</a>
 			</li>
@@ -69,7 +67,7 @@
 				};
 
 				if (Object.keys(this.specialAnswers).length > 0) {
-					params.special_answer = JSON.stringify(this.specialAnswers);
+					params.extra_answers = JSON.stringify(this.specialAnswers);
 				}
 
 				const response = await Axios({
@@ -81,10 +79,15 @@
 				if (response.data.success && response.data.data.html) {
 					const anchor = document.getElementsByClassName('js-content')[0];
 					
-					// function insertAfter(newNode, referenceNode) {
-					// 	referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-					// }
-					ac.innerHTML = response.data.data.html;
+					anchor.innerHTML = response.data.data.html;
+
+					window.setTimeout(() => {
+						$('html, body').animate({ 
+							scrollTop: anchor.offsetTop,
+						}, 400);
+					}, 100);
+
+					window.$apiInitComponents();
 
 					this.inserted = true;
 				}

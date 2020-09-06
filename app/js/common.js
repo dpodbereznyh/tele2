@@ -123,90 +123,28 @@ function initStuff () {
     //Map
     // $('.faq__item_head').click(function () {
 
-    // }
+	// }
+	
+	$('.js-scroll-content').on('click', function () {
+		var target = document.querySelector('.move');
+
+		if (target) {
+			$('body,html').animate({
+				scrollTop: target.offsetTop
+			}, 500);
+		}
+	});
 }
 
 $(document).ready(function () {
 	initStuff();
 });
-//Location Slider
-var locationSlider = new Swiper ('.location__swiper-container', {
-    slideClass: 'location__swiper-slide',
-    wrapperClass: 'location__swiper-wrapper',
-    navigation: {
-        nextEl: '.location__button-next',
-        prevEl: '.location__button-prev',
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 32
-        },
-        577: {
-            slidesPerView: 3,
-            spaceBetween: 32
-        }
-    }
 
-});
 
-//Date Slider
-var dateSlider = new Swiper ('.date__swiper-container', {
-    slideClass: 'date__slide',
-    wrapperClass: 'date__wrapper',
-    slidesPerView: 1,
-    navigation: {
-        nextEl: '.date__button-next',
-        prevEl: '.date__button-prev',
-    },
-    // slideActiveClass: 'date__slide_active',
-});
-//Table Slider
-var tableSlider = new Swiper ('.table__swiper-container', {
-    slideClass: 'table__slide',
-    wrapperClass: 'table__wrapper',
-    slidesPerView: 1,
-    thumbs: {
-        swiper: dateSlider,
-    },
-    navigation: {
-        nextEl: '.date__button-next',
-        prevEl: '.date__button-prev',
-    },
 
-    // thumbs: {
-    //     swiper: {
-    //
-    //         slideThumbActiveClass: '.date__slide_active',
-    //     }
-    // }
-});
-//Speakers Slider
-var speakersSlider = new Swiper ('.speakers__swiper-container', {
-    slideClass: 'speakers__slide',
-    wrapperClass: 'speakers__wrapper',
-    slidesPerView: 3,
-    spaceBetween: 32,
-    navigation: {
-        nextEl: '.speakers__button-next',
-        prevEl: '.speakers__button-prev',
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 32
-        },
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 32
-        },
 
-        980: {
-            slidesPerView: 3,
-            spaceBetween: 32
-        }
-    }
-});
+
+
 //Recommend Slider
 
 
@@ -267,9 +205,9 @@ function mobileSlider() {
         });
         }
 
-    if (window.innerWidth > 600) {
+    if (window.innerWidth > 600 && recommendSlider) {
         if (slider.classList.contains('swiper-container-initialized')) {
-            mySwiper.destroy();
+            recommendSlider.destroy();
         }
     }
 }
@@ -281,9 +219,121 @@ window.addEventListener('resize', function () {
 });
 
 
+
+function initSliders () {
+	var dateSlider = document.querySelector('.date__swiper-container');
+	var tableSlider = document.querySelector('.table__swiper-container');
+	
+	if (dateSlider && tableSlider) {
+		//Date Slider
+		dateSlider = new Swiper ('.date__swiper-container', {
+			slideClass: 'date__slide',
+			wrapperClass: 'date__wrapper',
+			slidesPerView: 1,
+			// controller: {
+			// 	control: tableSlider,
+			// },
+			navigation: {
+				nextEl: '.date__button-next',
+				prevEl: '.date__button-prev',
+			},
+			// slideActiveClass: 'date__slide_active',
+		});
+		//Table Slider
+		tableSlider = new Swiper ('.table__swiper-container', {
+			slideClass: 'table__slide',
+			wrapperClass: 'table__wrapper',
+			slidesPerView: 1,
+			// controller: {
+			// 	control: dateSlider,
+			// },
+			navigation: {
+				nextEl: '.date__button-next',
+				prevEl: '.date__button-prev',
+			},
+
+			// thumbs: {
+			//     swiper: {
+			//
+			//         slideThumbActiveClass: '.date__slide_active',
+			//     }
+			// }
+		});
+
+		dateSlider.controller.control = [
+			tableSlider,
+		];
+		tableSlider.controller.control = [
+			dateSlider,
+		];		
+	}
+	
+	//Speakers Slider
+	if (document.querySelector('.speakers__swiper-container')) {
+		var speakersSlider = new Swiper ('.speakers__swiper-container', {
+			slideClass: 'speakers__slide',
+			wrapperClass: 'speakers__wrapper',
+			slidesPerView: 3,
+			spaceBetween: 32,
+			navigation: {
+				nextEl: '.speakers__button-next',
+				prevEl: '.speakers__button-prev',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 32
+				},
+				640: {
+					slidesPerView: 2,
+					spaceBetween: 32
+				},
+	
+				980: {
+					slidesPerView: 3,
+					spaceBetween: 32
+				}
+			}
+		});
+	}
+
+	if (document.querySelector('.location__swiper-container')) {
+		//Location Slider
+		var locationSlider = new Swiper ('.location__swiper-container', {
+			slideClass: 'location__swiper-slide',
+			wrapperClass: 'location__swiper-wrapper',
+			navigation: {
+				nextEl: '.location__button-next',
+				prevEl: '.location__button-prev',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 32
+				},
+				577: {
+					slidesPerView: 3,
+					spaceBetween: 32
+				}
+			}
+	
+		});
+	}
+};
+
+
+$(function () {
+	initSliders();
+});
+
+
+// Здесь все, что потом необходимо запустить после подгрузки контента с сервера
 function initAllComponents () {
 	initStuff();
+	initSliders();
 	mobileSlider();
 };
 
-window.$apiInitComponents = initAllComponents();
+
+
+window.$apiInitComponents = initAllComponents;

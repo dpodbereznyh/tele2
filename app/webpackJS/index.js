@@ -27,12 +27,14 @@ window.$(function() {
 
 		if (phone.length !== 10) { return; }
 
+		const phoneFormatted = `8${phone}`;
+
 		const response = await Axios({
 			method: 'get',
 			url: '/assets/components/apitele2/action.php',
 			params: {
 				action: 'questions/get',
-				phone,
+				phone: phoneFormatted,
 			},
 		});
 
@@ -41,7 +43,7 @@ window.$(function() {
 		if (response.data && response.data.success && response.data.data.next) {
 			store.dispatch('addUserField', {
 				key: 'phone',
-				value: `8${phone}`,
+				value: phoneFormatted,
 			});
 			window.$apiCreateInstance();
 		}
