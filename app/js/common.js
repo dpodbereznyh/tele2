@@ -89,10 +89,11 @@ $(document).ready(function () {
     });
 
     //Map
-    $('.faq__item_head').click(function () {
+    // $('.faq__item_head').click(function () {
 
-    }
+    // }
 });
+
 //Location Slider
 var locationSlider = new Swiper ('.location__swiper-container', {
     slideClass: 'location__swiper-slide',
