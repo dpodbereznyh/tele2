@@ -39,6 +39,7 @@
 <script>
 	import Axios from 'axios';
 	import { mapGetters } from 'vuex';
+	import { insertMarkup } from '../utils';
 
 	export default {
 		name: 'stage-final',
@@ -77,18 +78,8 @@
 				});
 
 				if (response.data.success && response.data.data.html) {
-					const anchor = document.getElementsByClassName('js-content')[0];
-					
-					anchor.innerHTML = response.data.data.html;
-
-					window.setTimeout(() => {
-						$('html, body').animate({ 
-							scrollTop: anchor.offsetTop,
-						}, 400);
-					}, 100);
-
-					window.$apiInitComponents();
-
+					const markup = response.data.data.html;
+					insertMarkup(markup);
 					this.inserted = true;
 				}
 			},

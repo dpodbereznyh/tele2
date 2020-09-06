@@ -125,7 +125,7 @@ function initStuff () {
 
 	// }
 	
-	$('.js-scroll-content').on('click', function () {
+	$(document).on('click', '.js-scroll-content', function () {
 		var target = document.querySelector('.move');
 
 		if (target) {
