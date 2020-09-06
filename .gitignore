@@ -9,6 +9,7 @@ build/
 /**/*.DS_Store
 /app/js/scripts.min.js
 /app/css/main.min.css
+/app/js/bundle.min.js
 app/css/vendors/bootstrap/scss/bootstrap.min.css
 app/css/vendors/bootstrap/scss/bootstrap-reboot.min.css
 app/css/vendors/bootstrap/scss/bootstrap-grid.min.css
