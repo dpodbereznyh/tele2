@@ -10,7 +10,12 @@ var gulp          = require('gulp'),
     rename        = require('gulp-rename'),
     autoprefixer  = require('gulp-autoprefixer'),
     notify        = require('gulp-notify'),
-    rsync         = require('gulp-rsync');
+	rsync         = require('gulp-rsync');
+	
+const webpack			= require('webpack');
+const webpackStream 	= require('webpack-stream');
+const VueLoaderPlugin 	= require('vue-loader/lib/plugin');
+require("babel-polyfill");
 
 gulp.task('browser-sync', function() {
     browserSync({
@@ -40,12 +45,13 @@ gulp.task('scripts', function() {
         // Without JQuery dependensies
         // JQuery dependent
         // 'app/js/vendors/bootstrap.min.js',
-        'app/js/vendors/jquery-3.4.1.js',
+		'app/js/vendors/jquery-3.4.1.js',
         'app/js/vendors/jquery.smartmenus.js',
         'app/js/vendors/swiper.min.js',
         'app/js/vendors/jquery.fancybox.min.js',
         'app/js/vendors/wow.js',
-        'app/js/vendors/stacktable.js',
+		'app/js/vendors/stacktable.js',
+		'app/js/vendors/jquery.inputmask.min.js',
         'app/js/common.js', // Always at the end
     ])
         .pipe(concat('scripts.min.js'))
@@ -75,9 +81,52 @@ gulp.task('code', function() {
 //	}))
 //});
 
+gulp.task('es6', done => {
+	return script = gulp.src('./app/webpackJS/index.js')
+	.pipe(webpackStream({
+		// mode: config.production ? 'production' : 'development',
+		mode: 'development',
+		output: {
+			filename: 'bundle.min.js',
+		},
+		entry: ["babel-polyfill", "./app/webpackJS/index.js"],
+		module: {
+			rules: [
+				{
+					test: /\.(js)$/,
+					exclude: /(node_modules)/,
+					loader: 'babel-loader',
+				},
+				{
+					test: /\.vue$/,
+					loader: 'vue-loader'
+				}
+			]
+		},
+		performance: {
+			hints: false,
+			maxEntrypointSize: 1000000,
+			maxAssetSize: 1000000
+		},
+		resolve: {
+			extensions: ['*', '.js', '.vue', '.json']
+		},
+		plugins: [
+			// new webpack.ProvidePlugin({
+			// 	$: "jquery",
+			// 	jQuery: "jquery"
+			// }),
+			new VueLoaderPlugin()
+		]
+	}))
+	.pipe(gulp.dest('app/js'))
+	.pipe(browserSync.stream({ stream: true }))
+});
+
 gulp.task('watch', function() {
     gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
     gulp.watch(['app/libs/**/*.js', 'app/js/common.js', 'app/js/vendors/**/*.js'], gulp.parallel('scripts'));
-    gulp.watch('app/*.html', gulp.parallel('code'))
+	gulp.watch('app/*.html', gulp.parallel('code'));
+	gulp.watch(['app/webpackJS/**/*.js', 'app/webpackJS/**/*.vue'], gulp.parallel('es6'));
 });
-gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('styles', 'scripts', 'es6', 'browser-sync', 'watch'));

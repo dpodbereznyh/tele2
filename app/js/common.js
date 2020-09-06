@@ -1,6 +1,38 @@
-$(document).ready(function () {
+window.$apimedia = {};
 
-    // $(window).scroll(function() {
+function initInputMasks () {
+	$('[data-api-input-mask="phone"]').inputmask({
+		mask: '8 (999) 999-99-99',
+		showMaskOnHover: false,
+		onBeforePaste: function (pastedValue) {
+			var processedValue = Inputmask.format(pastedValue, 'numeric');
+	
+			// do something with it
+	
+			if (processedValue.length > 10) {
+				processedValue = processedValue.slice(processedValue.length - 10);
+			}
+	
+			return processedValue;
+		},
+	});
+	$('[data-api-input-mask="name"]').inputmask({
+		regex: '[а-яА-Я -]*',
+		showMaskOnHover: false,
+	});
+}
+
+$(function() {
+	initInputMasks();
+});
+
+window.$apimedia.InputMasks = {
+	init: initInputMasks,
+};
+
+
+function initStuff () {
+	// $(window).scroll(function() {
     //     if ($(this).scrollTop() > 90){
     //         $('header').addClass("sticky");
     //     }
@@ -92,8 +124,11 @@ $(document).ready(function () {
     // $('.faq__item_head').click(function () {
 
     // }
-});
+}
 
+$(document).ready(function () {
+	initStuff();
+});
 //Location Slider
 var locationSlider = new Swiper ('.location__swiper-container', {
     slideClass: 'location__swiper-slide',
@@ -200,10 +235,14 @@ var speakersSlider = new Swiper ('.speakers__swiper-container', {
 //         }
 //     }
 // });
-var slider = document.querySelector('.recommend-slider');
-var recommendSlider;
+
 
 function mobileSlider() {
+	var slider = document.querySelector('.recommend-slider');
+	var recommendSlider;
+
+	if (!slider) { return; }
+
     if (window.innerWidth <= 600) {
         recommendSlider = new Swiper(slider, {
             slidesPerView: 1,
@@ -238,5 +277,13 @@ function mobileSlider() {
 mobileSlider();
 
 window.addEventListener('resize', function () {
-    mobileSlider();
+	mobileSlider();
 });
+
+
+function initAllComponents () {
+	initStuff();
+	mobileSlider();
+};
+
+window.$apiInitComponents = initAllComponents();

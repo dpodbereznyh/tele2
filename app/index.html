@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="main-screen__form">
-                            <div class="main-screen__form_first d-none">
+                            <form data-role="beginRegister" class="main-screen__form_first d-none">
                                 <p class="main-screen__form_description TextP">
                                     Но для начала тебе нужно зарегистрироваться и определить свой уникальный скилл, который ты будешь прокачивать на протяжении всей Коммерческой конференции 2020. Об этом чуть позже, а сейчас заполни все поля.
                                 </p>
@@ -57,12 +57,12 @@
                                 <p class="main-screen__form_title DisplayH6">
                                     Начало регистрации
                                 </p>
-                                <input type="tel" placeholder="Введи номер телефона" required class="main-screen__form_input">
-                                <button class="main-screen__form_btn btn TextP">
+                                <input type="tel" placeholder="Введи номер телефона" name="phone" data-api-input-mask="phone" required class="main-screen__form_input">
+                                <button type="submit" class="main-screen__form_btn btn TextP">
                                     Выйти за рамки
                                 </button>
-                            </div>
-                            <div class="main-screen__form_second d-none">
+                            </form>
+                            <div class="main-screen__form_second">
                                 <div class="main-screen__form_second_wrap">
                                     <input type="text" placeholder="Фамилия" required class="main-screen__form_input main-screen__form_input-second">
                                     <input type="text" placeholder="Имя" required class="main-screen__form_input main-screen__form_input-second">
@@ -154,7 +154,7 @@
                                     Далее
                                 </button>
                             </div>
-                            <div class="main-screen__form_final">
+                            <div class="main-screen__form_final d-none">
                                 <p class="main-screen__form_final_title DisplayH6">
                                     Спасибо за регистрацию,<br> Сергей! Твой скилл:
                                 </p>
@@ -194,7 +194,7 @@
             </div>
         </div>
     </header>
-    <div class="section move">
+    <!-- <div class="section move">
         <div class="container-fluid">
             <div class="row">
                 <div class="order-2 order-md-1 col-md-6 col-lg-8">
@@ -865,9 +865,9 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
 </main>
-<footer class="footer" id="footer">
+<!-- <footer class="footer" id="footer">
     <div class="container-fluid">
         <div class="footer__wrap">
             <h5 class="footer__title DisplayH6">
@@ -883,7 +883,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
 <div class="d-none">
     <form id="popup-form">
         <div class="popup-form">
@@ -909,6 +909,7 @@
 </div>
 
 <script src="js/scripts.min.js"></script>
+<script src="js/bundle.min.js"></script>
 
 </body>
 </html>
