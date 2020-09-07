@@ -161,34 +161,47 @@ $(document).ready(function () {
 });
 
 //Recommend Slider
+function mobileSlider() {
+    if (window.innerWidth <= 728.5) {
+        var recommendSlider = new Swiper ('.recommend__container', {
+            slideClass: 'recommend__item',
+            wrapperClass: 'recommend__wrapper',
+            slidesPerView: 1,
+            spaceBetween: 32,
+            navigation: {
+                nextEl: '.recommend__button-next',
+                prevEl: '.recommend__button-prev',
+            }
+        });
 
-var recommendSlider = new Swiper ('.recommend__container', {
-    slideClass: 'recommend__item',
-    wrapperClass: 'recommend__wrapper',
-    slidesPerView: 3,
-    // spaceBetween: 32,
+    } else {
+        var recommendSlider = new Swiper ('.recommend__container', {
+            slideClass: 'recommend__item',
+            wrapperClass: 'recommend__wrapper',
+            // spaceBetween: 32,
+            slidesPerColumnFill: 'row',
+            slidesPerColumn: 3,
 
-    // slidesPerColumnFill: 'row',
+            breakpoints: {
+                728: {
+                    slidesPerView: 2,
+                    // spaceBetween: 32,
+                    slidesPerColumnFill: 'row',
+                    slidesPerColumn: 2
+                },
+                1000: {
+                    slidesPerView: 3,
+                    // spaceBetween: 32,
+                    slidesPerColumnFill: 'row',
+                    slidesPerColumn: 3
+                }
 
-    navigation: {
-        nextEl: '.recommend__button-next',
-        prevEl: '.recommend__button-prev',
-    },
-    // breakpoints: {
-    //     320: {
-    //         slidesPerView: 1,
-    //         spaceBetween: 32,
-    //     },
-    //     600: {
-    //         slidesPerView: 2,
-    //         spaceBetween: 32
-    //     },
-    //     900: {
-    //         slidesPerView: 3,
-    //         spaceBetween: 32
-    //     }
-    // }
-});
+            }
+        });
+    }
+}
+
+mobileSlider();
 
 function initSliders () {
 	var dateSlider = document.querySelector('.date__swiper-container');

@@ -102,7 +102,7 @@
 }
 @media screen and (max-width: 577.5px) {
   .location {
-    padding: 38px 0 227px;
+    padding: 38px 0 0;
     background: $dark;
   }
   .location__slider_button_wrap {
@@ -113,11 +113,6 @@
   }
   .location__map {
     display: block;
-    position: absolute;
-    width: 100%;
-    height: 220px;
-    bottom: 0;
-    left: 0;
   }
   .location__swiper-wrapper {
     margin-bottom: 16px;
@@ -429,18 +424,21 @@
 /*****Speakers End*****/
 /*****Recommend*****/
 .recommend {
-  &__wrapper {
-    display: flex;
-    //flex-wrap: wrap;
+  &__container {
+    padding: 25px;
   }
   &__item {
-    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
-    margin-bottom: 32px;
-    width: 32%;
-    margin-right: 2%;
+    box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.15);
+    //margin: 8px;
+    //width: 32%;
+    //margin-right: 2%;
+    //padding: 25px;
     &:nth-child(3n) {
-      margin-right: 0;
+    //margin-right: 25px;
     }
+  }
+  &__item_wrap {
+
   }
   &__item_desc_wrap {
     padding: 32px;
@@ -472,6 +470,13 @@
       transition: .35s;
     }
   }
+  &__slider_button_wrap {
+    display: none;
+  }
+  &__slider_button {
+    width: 22px;
+    height: 17px;
+  }
 }
 
 @media screen and (max-width: 890.5px) {
@@ -479,14 +484,22 @@
   //  justify-content: space-around;
   //}
   .recommend__item {
-    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
-    margin-bottom: 32px;
+    //box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+    //margin-bottom: 32px;
     //width: 45%;
-    margin-right: 0;
+    //margin-right: 0;
     &:nth-child(3n) {
-      margin-right: 0;
+      //margin-right: 0;
     }
   }
+}
+@media screen and (max-width: 727.5px){
+   .recommend__slider_button_wrap {
+     width: 67px;
+     display: flex;
+     justify-content: space-between;
+     margin: 0 auto;
+   }
 }
 //@include media-breakpoint-down(xs) {
 //	.recommend {
@@ -498,7 +511,9 @@
 @media screen and (max-width: 640px) {
   .recommend__wrapper {
     //flex-wrap: nowrap;
+
   }
+
 }
 /*****Recommend End*****/
 
