@@ -178,20 +178,20 @@ function mobileSlider() {
         var recommendSlider = new Swiper ('.recommend__container', {
             slideClass: 'recommend__item',
             wrapperClass: 'recommend__wrapper',
-            // spaceBetween: 32,
+            spaceBetween: 32,
             slidesPerColumnFill: 'row',
             slidesPerColumn: 3,
 
             breakpoints: {
                 728: {
                     slidesPerView: 2,
-                    // spaceBetween: 32,
+                    spaceBetween: 32,
                     slidesPerColumnFill: 'row',
                     slidesPerColumn: 2
                 },
                 1000: {
                     slidesPerView: 3,
-                    // spaceBetween: 32,
+                    spaceBetween: 32,
                     slidesPerColumnFill: 'row',
                     slidesPerColumn: 3
                 }
