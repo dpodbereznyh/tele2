@@ -61,6 +61,7 @@ window.$(function() {
 				params: {
 					action: 'content/get',
 					phone: phoneFormatted,
+					newUser: 0,
 				},
 			});
 
