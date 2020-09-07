@@ -6,13 +6,13 @@ function initInputMasks () {
 		showMaskOnHover: false,
 		onBeforePaste: function (pastedValue) {
 			var processedValue = Inputmask.format(pastedValue, 'numeric');
-	
+
 			// do something with it
-	
+
 			if (processedValue.length > 10) {
 				processedValue = processedValue.slice(processedValue.length - 10);
 			}
-	
+
 			return processedValue;
 		},
 	});
@@ -122,9 +122,29 @@ function initStuff () {
 
     //Map
     // $('.faq__item_head').click(function () {
+        myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
+            hintContent: 'Собственный значок метки с контентом',
+            balloonContent: 'А эта — новогодняя',
+            iconContent: '12'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#imageWithContent',
+            // Своё изображение иконки метки.
+            iconImageHref: 'images/ball.png',
+            // Размеры метки.
+            iconImageSize: [48, 48],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-24, -24],
+            // Смещение слоя с содержимым относительно слоя с картинкой.
+            iconContentOffset: [15, 15],
+            // Макет содержимого.
+            iconContentLayout: MyIconContentLayout
+        });
 
 	// }
-	
+
 	$(document).on('click', '.js-scroll-content', function () {
 		var target = document.querySelector('.move');
 
@@ -140,90 +160,40 @@ $(document).ready(function () {
 	initStuff();
 });
 
-
-
-
-
-
 //Recommend Slider
 
+var recommendSlider = new Swiper ('.recommend__container', {
+    slideClass: 'recommend__item',
+    wrapperClass: 'recommend__wrapper',
+    slidesPerView: 3,
+    // spaceBetween: 32,
 
-// var recommendSlider = new Swiper ('.recommend-slider', {
-//     slideClass: 'recommend__slide',
-//     wrapperClass: 'recommend__wrapper',
-//     slidesPerView: 1,
-//     spaceBetween: 32,
-//     navigation: {
-//         nextEl: '.recommend__button-next',
-//         prevEl: '.recommend__button-prev',
-//     },
-//     breakpoints: {
-//         320: {
-//             slidesPerView: 1,
-//             spaceBetween: 32
-//         },
-//         640: {
-//             slidesPerView: 2,
-//             spaceBetween: 32
-//         },
-//
-//         980: {
-//             slidesPerView: 3,
-//             spaceBetween: 32
-//         }
-//     }
-// });
+    // slidesPerColumnFill: 'row',
 
-
-function mobileSlider() {
-	var slider = document.querySelector('.recommend-slider');
-	var recommendSlider;
-
-	if (!slider) { return; }
-
-    if (window.innerWidth <= 600) {
-        recommendSlider = new Swiper(slider, {
-            slidesPerView: 1,
-            spaceBetween: 32,
-            slideClass: 'recommend__slide',
-            wrapperClass: 'recommend__wrapper',
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 32
-                },
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 32
-                },
-
-                980: {
-                    slidesPerView: 3,
-                    spaceBetween: 32
-                }
-            }
-        });
-        }
-
-    if (window.innerWidth > 600 && recommendSlider) {
-        if (slider.classList.contains('swiper-container-initialized')) {
-            recommendSlider.destroy();
-        }
-    }
-}
-
-mobileSlider();
-
-window.addEventListener('resize', function () {
-	mobileSlider();
+    navigation: {
+        nextEl: '.recommend__button-next',
+        prevEl: '.recommend__button-prev',
+    },
+    // breakpoints: {
+    //     320: {
+    //         slidesPerView: 1,
+    //         spaceBetween: 32,
+    //     },
+    //     600: {
+    //         slidesPerView: 2,
+    //         spaceBetween: 32
+    //     },
+    //     900: {
+    //         slidesPerView: 3,
+    //         spaceBetween: 32
+    //     }
+    // }
 });
-
-
 
 function initSliders () {
 	var dateSlider = document.querySelector('.date__swiper-container');
 	var tableSlider = document.querySelector('.table__swiper-container');
-	
+
 	if (dateSlider && tableSlider) {
 		//Date Slider
 		dateSlider = new Swiper ('.date__swiper-container', {
@@ -267,9 +237,9 @@ function initSliders () {
 		];
 		tableSlider.controller.control = [
 			dateSlider,
-		];		
+		];
 	}
-	
+
 	//Speakers Slider
 	if (document.querySelector('.speakers__swiper-container')) {
 		var speakersSlider = new Swiper ('.speakers__swiper-container', {
@@ -290,7 +260,7 @@ function initSliders () {
 					slidesPerView: 2,
 					spaceBetween: 32
 				},
-	
+
 				980: {
 					slidesPerView: 3,
 					spaceBetween: 32
@@ -318,7 +288,7 @@ function initSliders () {
 					spaceBetween: 32
 				}
 			}
-	
+
 		});
 	}
 };

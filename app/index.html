@@ -62,7 +62,7 @@
                                     Выйти за рамки
                                 </button>
                             </form>
-                                <div class="main-screen__form_second_wrap">
+                                <div class="main-screen__form_second_wrap d-none">
                                     <input type="text" placeholder="Фамилия" required class="main-screen__form_input main-screen__form_input-second">
                                     <input type="text" placeholder="Имя" required class="main-screen__form_input main-screen__form_input-second">
                                     <input type="email" placeholder="Email" required class="main-screen__form_input main-screen__form_input-second">
@@ -195,7 +195,7 @@
 	</header>
 	<div class="js-content">
 
-	
+
     <div class="section move">
         <div class="container-fluid">
             <div class="row">
@@ -214,7 +214,10 @@
         </div>
     </div>
     <section class="location" id="location">
-        <div class="container__fluid">
+        <div class="location__mark">
+            <img src="../img/location/location-mark.svg" alt="image">
+        </div>
+        <div class="container-fluid">
             <div class="location__nav">
                 <h2 class="location__nav_title StencilH1">
                     ГДЕ ЖИВЕМ?
@@ -256,19 +259,22 @@
                         </div>
                     </div>
                     <div class="location__slider_button_wrap">
-                        <div class="swiper-button-prev location__button-prev location__btn-mobile location__slider_button">
+                        <div class="swiper-button-prev location__button-prev location__slider_button">
                             <span class="icon-Prev"></span>
                         </div>
-                        <div class="swiper-button-next location__button-next location__btn-mobile location__slider_button">
+                        <div class="swiper-button-next location__button-next location__slider_button">
                             <span class="icon-Next"></span>
                         </div>
                     </div>
                 </div>
-                <a href="#" class="location__btn btn TextP">
+                <a href="#popup-map" data-fancybox="" class="location__btn btn TextP">
                     Показать на карте
                 </a>
             </div>
-            <a href="#" class="location__btn-mobile btn TextP">
+        </div>
+        <div class="location__map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A31577af6c1f5bb718de12b11827a279fac6bbfa4a1630d462b8f18638fd367f5&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+            <a href="#popup-map" data-fancybox="" class="location__btn-mobile btn TextP">
                 Показать на карте
             </a>
         </div>
@@ -587,242 +593,244 @@
                 Специально для тебя мы сделали подборку с проверенными местами, где ты сможешь перевести дух и зарядиться энергией для продуктивной работы
             </p>
             <div class="recommend-slider">
-                <div class="recommend__wrapper">
-                    <div class="recommend__item">
-                        <div class="recommend__item_image">
-                            <img src="../img/recommend/recommend-image1.jpg" alt="image">
+                <div class="recommend__container swiper-container">
+                    <div class="recommend__wrapper swiper-wrapper">
+                        <div class="recommend__item swiper-slide">
+                            <div class="recommend__item_image">
+                                <img src="../img/recommend/recommend-image1.jpg" alt="image">
+                            </div>
+                            <div class="recommend__item_desc_wrap">
+                                <p class="recommend__item_title DisplayStrong">
+                                    Freshbar Blender
+                                </p>
+                                <p class="recommend__item_description TextP">
+                                    Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
+                                </p>
+                                <ul class="recommend__contacts">
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
+                                        </div>
+                                        <p class="recommend__contacts_text TextVerySmall">
+                                            ул. Горького, 53
+                                        </p>
+                                    </li>
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                        </div>
+                                        <a href="+79999999999" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                            +7 (999) 999 99-99
+                                        </a>
+                                    </li>
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                        </div>
+                                        <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                            www.freshbarblender.com
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="recommend__item_desc_wrap">
-                            <p class="recommend__item_title DisplayStrong">
-                                Freshbar Blender
-                            </p>
-                            <p class="recommend__item_description TextP">
-                                Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
-                            </p>
-                            <ul class="recommend__contacts">
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
-                                    </div>
-                                    <p class="recommend__contacts_text TextVerySmall">
-                                        ул. Горького, 53
-                                    </p>
-                                </li>
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
-                                    </div>
-                                    <a href="+79999999999" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                        +7 (999) 999 99-99
-                                    </a>
-                                </li>
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
-                                    </div>
-                                    <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                        www.freshbarblender.com
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="recommend__item">
+                            <div class="recommend__item_image">
+                                <img src="../img/recommend/recommend-image1.jpg" alt="image">
+                            </div>
+                            <div class="recommend__item_desc_wrap">
+                                <p class="recommend__item_title DisplayStrong">
+                                    Freshbar Blender
+                                </p>
+                                <p class="recommend__item_description TextP">
+                                    Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
+                                </p>
+                                <ul class="recommend__contacts">
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
+                                        </div>
+                                        <p class="recommend__contacts_text TextVerySmall">
+                                            ул. Горького, 53
+                                        </p>
+                                    </li>
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                        </div>
+                                        <a href="+79999999999" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                            +7 (999) 999 99-99
+                                        </a>
+                                    </li>
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                        </div>
+                                        <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                            www.freshbarblender.com
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="recommend__item">
+                            <div class="recommend__item_image">
+                                <img src="../img/recommend/recommend-image1.jpg" alt="image">
+                            </div>
+                            <div class="recommend__item_desc_wrap">
+                                <p class="recommend__item_title DisplayStrong">
+                                    Freshbar Blender
+                                </p>
+                                <p class="recommend__item_description TextP">
+                                    Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
+                                </p>
+                                <ul class="recommend__contacts">
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
+                                        </div>
+                                        <p class="recommend__contacts_text TextVerySmall">
+                                            ул. Горького, 53
+                                        </p>
+                                    </li>
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                        </div>
+                                        <a href="+79999999999" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                            +7 (999) 999 99-99
+                                        </a>
+                                    </li>
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                        </div>
+                                        <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                            www.freshbarblender.com
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="recommend__item">
+                            <div class="recommend__item_image">
+                                <img src="../img/recommend/recommend-image1.jpg" alt="image">
+                            </div>
+                            <div class="recommend__item_desc_wrap">
+                                <p class="recommend__item_title DisplayStrong">
+                                    Freshbar Blender
+                                </p>
+                                <p class="recommend__item_description TextP">
+                                    Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
+                                </p>
+                                <ul class="recommend__contacts">
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
+                                        </div>
+                                        <p class="recommend__contacts_text TextVerySmall">
+                                            ул. Горького, 53
+                                        </p>
+                                    </li>
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                        </div>
+                                        <a href="+79999999999" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                            +7 (999) 999 99-99
+                                        </a>
+                                    </li>
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                        </div>
+                                        <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                            www.freshbarblender.com
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="recommend__item">
+                            <div class="recommend__item_image">
+                                <img src="../img/recommend/recommend-image1.jpg" alt="image">
+                            </div>
+                            <div class="recommend__item_desc_wrap">
+                                <p class="recommend__item_title DisplayStrong">
+                                    Freshbar Blender
+                                </p>
+                                <p class="recommend__item_description TextP">
+                                    Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
+                                </p>
+                                <ul class="recommend__contacts">
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
+                                        </div>
+                                        <p class="recommend__contacts_text TextVerySmall">
+                                            ул. Горького, 53
+                                        </p>
+                                    </li>
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                        </div>
+                                        <a href="+79999999999" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                            +7 (999) 999 99-99
+                                        </a>
+                                    </li>
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                        </div>
+                                        <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                            www.freshbarblender.com
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="recommend__item">
+                            <div class="recommend__item_image">
+                                <img src="../img/recommend/recommend-image1.jpg" alt="image">
+                            </div>
+                            <div class="recommend__item_desc_wrap">
+                                <p class="recommend__item_title DisplayStrong">
+                                    Freshbar Blender
+                                </p>
+                                <p class="recommend__item_description TextP">
+                                    Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
+                                </p>
+                                <ul class="recommend__contacts">
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
+                                        </div>
+                                        <p class="recommend__contacts_text TextVerySmall">
+                                            ул. Горького, 53
+                                        </p>
+                                    </li>
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                        </div>
+                                        <a href="+79999999999" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                            +7 (999) 999 99-99
+                                        </a>
+                                    </li>
+                                    <li class="recommend__contacts_item">
+                                        <div class="recommend__contacts_icon">
+                                            <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                        </div>
+                                        <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                            www.freshbarblender.com
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="recommend__item">
-                        <div class="recommend__item_image">
-                            <img src="../img/recommend/recommend-image1.jpg" alt="image">
-                        </div>
-                        <div class="recommend__item_desc_wrap">
-                            <p class="recommend__item_title DisplayStrong">
-                                Freshbar Blender
-                            </p>
-                            <p class="recommend__item_description TextP">
-                                Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
-                            </p>
-                            <ul class="recommend__contacts">
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
-                                    </div>
-                                    <p class="recommend__contacts_text TextVerySmall">
-                                        ул. Горького, 53
-                                    </p>
-                                </li>
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
-                                    </div>
-                                    <a href="+79999999999" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                        +7 (999) 999 99-99
-                                    </a>
-                                </li>
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
-                                    </div>
-                                    <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                        www.freshbarblender.com
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="recommend__item">
-                        <div class="recommend__item_image">
-                            <img src="../img/recommend/recommend-image1.jpg" alt="image">
-                        </div>
-                        <div class="recommend__item_desc_wrap">
-                            <p class="recommend__item_title DisplayStrong">
-                                Freshbar Blender
-                            </p>
-                            <p class="recommend__item_description TextP">
-                                Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
-                            </p>
-                            <ul class="recommend__contacts">
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
-                                    </div>
-                                    <p class="recommend__contacts_text TextVerySmall">
-                                        ул. Горького, 53
-                                    </p>
-                                </li>
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
-                                    </div>
-                                    <a href="+79999999999" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                        +7 (999) 999 99-99
-                                    </a>
-                                </li>
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
-                                    </div>
-                                    <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                        www.freshbarblender.com
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="recommend__item">
-                        <div class="recommend__item_image">
-                            <img src="../img/recommend/recommend-image1.jpg" alt="image">
-                        </div>
-                        <div class="recommend__item_desc_wrap">
-                            <p class="recommend__item_title DisplayStrong">
-                                Freshbar Blender
-                            </p>
-                            <p class="recommend__item_description TextP">
-                                Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
-                            </p>
-                            <ul class="recommend__contacts">
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
-                                    </div>
-                                    <p class="recommend__contacts_text TextVerySmall">
-                                        ул. Горького, 53
-                                    </p>
-                                </li>
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
-                                    </div>
-                                    <a href="+79999999999" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                        +7 (999) 999 99-99
-                                    </a>
-                                </li>
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
-                                    </div>
-                                    <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                        www.freshbarblender.com
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="recommend__item">
-                        <div class="recommend__item_image">
-                            <img src="../img/recommend/recommend-image1.jpg" alt="image">
-                        </div>
-                        <div class="recommend__item_desc_wrap">
-                            <p class="recommend__item_title DisplayStrong">
-                                Freshbar Blender
-                            </p>
-                            <p class="recommend__item_description TextP">
-                                Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
-                            </p>
-                            <ul class="recommend__contacts">
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
-                                    </div>
-                                    <p class="recommend__contacts_text TextVerySmall">
-                                        ул. Горького, 53
-                                    </p>
-                                </li>
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
-                                    </div>
-                                    <a href="+79999999999" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                        +7 (999) 999 99-99
-                                    </a>
-                                </li>
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
-                                    </div>
-                                    <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                        www.freshbarblender.com
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="recommend__item">
-                        <div class="recommend__item_image">
-                            <img src="../img/recommend/recommend-image1.jpg" alt="image">
-                        </div>
-                        <div class="recommend__item_desc_wrap">
-                            <p class="recommend__item_title DisplayStrong">
-                                Freshbar Blender
-                            </p>
-                            <p class="recommend__item_description TextP">
-                                Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
-                            </p>
-                            <ul class="recommend__contacts">
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
-                                    </div>
-                                    <p class="recommend__contacts_text TextVerySmall">
-                                        ул. Горького, 53
-                                    </p>
-                                </li>
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
-                                    </div>
-                                    <a href="+79999999999" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                        +7 (999) 999 99-99
-                                    </a>
-                                </li>
-                                <li class="recommend__contacts_item">
-                                    <div class="recommend__contacts_icon">
-                                        <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
-                                    </div>
-                                    <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                        www.freshbarblender.com
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-            </div>
+                </div>
             </div>
         </div>
     </section>
@@ -867,6 +875,9 @@
                 </li>
             </ul>
         </div>
+    </section> -->
+</main>
+<footer class="footer" id="footer">
     </section>
 
 <footer class="footer" id="footer">
@@ -879,7 +890,7 @@
                 <div class="footer__contacts_icon">
                     <img src="../img/footer/footer-phone-icon.svg" alt="icon">
                 </div>
-                <a href="+71230000000" class="footer__contacts_link DisplayH6">
+                <a href="tel:+71230000000" class="footer__contacts_link DisplayH6">
                     +7 (123) 000-00-00
                 </a>
             </div>
@@ -889,6 +900,7 @@
 
 </div>
 
+</footer>
 <div class="d-none">
     <form id="popup-form">
         <div class="popup-form">
@@ -907,12 +919,13 @@
 </div>
 <div class="d-none">
     <div id="popup-map">
-        <div class="map">
-            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A053bd947d462cc1a45aeba4070defff75501905071c0eaf68436ac9976ec698c&amp;width=514&amp;height=326&amp;lang=ru_RU&amp;apikey=<API-ключ>"></script>
+        <div class="map" id="map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A31577af6c1f5bb718de12b11827a279fac6bbfa4a1630d462b8f18638fd367f5&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
         </div>
     </div>
 </div>
-
+<script src="https://api-maps.yandex.ru/2.1/?apikey=d064a90f-98df-42af-a585-f6674d7e3270&lang=ru_RU" type="text/javascript">
+</script>
 <script src="js/scripts.min.js"></script>
 <script src="js/bundle.min.js"></script>
 

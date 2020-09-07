@@ -24,6 +24,19 @@
 .location {
   padding: 38px 0;
   background: url("../img/location/location-bg.jpg") no-repeat center center/cover;
+  position: relative;
+  >.container-fluid {
+    position: relative;
+  }
+  &__mark {
+    width: 134px;
+    position: absolute;
+    top: 45%;
+    right: calc(50% + 200px);
+  }
+  &__map {
+    display: none;
+  }
   &__nav {
     margin-left: auto;
     padding: 32px;
@@ -32,6 +45,7 @@
   }
   &__nav_title {
     color: $light;
+    margin-bottom: 32px;
   }
   &__nav_description {
     color: $light;
@@ -65,22 +79,45 @@
     }
   }
   &__slider_button_wrap {
+    display: none;
+  }
+  &__btn {
+    margin: 0 auto;
+    outline: none;
+  }
+  &__btn-mobile {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -32px);
+    width: 80%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1000.5px) {
+  .location__mark {
+    right: calc(50% + 200px);
+  }
+}
+@media screen and (max-width: 577.5px) {
+  .location {
+    padding: 38px 0 227px;
+    background: $dark;
+  }
+  .location__slider_button_wrap {
     width: 67px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
   }
-  &__btn {
-    margin: 0 auto;
-  }
-  &__btn-mobile {
-    display: none;
-    margin: 0 auto;
-  }
-}
-@media screen and (max-width: 577.5px) {
-  .location {
-    padding: 38px 0 16px;
+  .location__map {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 220px;
+    bottom: 0;
+    left: 0;
   }
   .location__swiper-wrapper {
     margin-bottom: 16px;
@@ -90,7 +127,6 @@
   }
   .location__nav {
     padding: 16px;
-    margin-bottom: 151px;
   }
   .location__swiper-container {
     margin-bottom: 0;
@@ -98,6 +134,13 @@
   .location__btn-mobile {
     display: block;
   }
+  .location__mark {
+    display: none;
+  }
+}
+.map {
+  width: 100%;
+  height: 100%;
 }
 /*****Location End*****/
 
@@ -388,7 +431,7 @@
 .recommend {
   &__wrapper {
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
   }
   &__item {
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
@@ -432,26 +475,26 @@
 }
 
 @media screen and (max-width: 890.5px) {
-  .recommend__wrapper {
-    justify-content: space-around;
-  }
+  //.recommend__wrapper {
+  //  justify-content: space-around;
+  //}
   .recommend__item {
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
     margin-bottom: 32px;
-    width: 45%;
+    //width: 45%;
     margin-right: 0;
     &:nth-child(3n) {
       margin-right: 0;
     }
   }
 }
-@include media-breakpoint-down(xs) {
-	.recommend {
-		&__item {
-			width: 100%;
-		}
-	}
-}
+//@include media-breakpoint-down(xs) {
+//	.recommend {
+//		&__item {
+//			width: 100%;
+//		}
+//	}
+//}
 @media screen and (max-width: 640px) {
   .recommend__wrapper {
     //flex-wrap: nowrap;
