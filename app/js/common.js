@@ -122,6 +122,7 @@ function initStuff () {
 
     //Map
     // $('.faq__item_head').click(function () {
+	if (typeof window.ymaps != 'undefined' && typeof window.MyIconContentLayout != 'undefined') {
         myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
             hintContent: 'Собственный значок метки с контентом',
             balloonContent: 'А эта — новогодняя',
@@ -142,6 +143,7 @@ function initStuff () {
             // Макет содержимого.
             iconContentLayout: MyIconContentLayout
         });
+	}
 
 	// }
 
