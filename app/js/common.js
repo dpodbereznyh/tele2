@@ -122,6 +122,8 @@ function initStuff () {
 
 
 
+
+
 	$(document).on('click', '.js-scroll-content', function () {
 		var target = document.querySelector('.move');
 
