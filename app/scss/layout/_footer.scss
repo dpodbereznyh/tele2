@@ -35,14 +35,10 @@
     align-items: flex-start;
   }
 }
-.fancybox-content {
-  padding: 32px;
-  max-width: 600px;
-  width: 90%;
-  background: $light;
-  margin: 0 auto;
-}
+
 .popup-form {
+  max-width: 600px;
+  padding: 30px;
   &-title {
     margin-bottom: 32px;
   }
@@ -67,4 +63,7 @@
       transition: .35s;
     }
   }
+}
+.fancybox-content {
+  padding: 5px;
 }

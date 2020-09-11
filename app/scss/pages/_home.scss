@@ -134,14 +134,14 @@
   }
 }
 .map {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 /*****Location End*****/
 
 /*****Timetable-desktop*****/
 .timetable {
-  margin-bottom: 64px;
+  //margin-bottom: 64px;
   &__description {
     margin-bottom: 32px;
   }
@@ -208,6 +208,7 @@
     font-weight: normal;
     font-size: 32px;
     line-height: 45px;
+    padding-right: 10px;
   }
   &__title_time {
     width: 28%;
@@ -431,12 +432,7 @@
     box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.15);
     margin-top: 0!important;
     margin-bottom: 32px;
-    //width: 32%;
-    //margin-right: 2%;
-    //padding: 25px;
-    &:nth-child(3n) {
-    //margin-right: 25px;
-    }
+    height: 780px;
   }
   &__item_wrap {
 
@@ -454,6 +450,11 @@
     display: flex;
     align-items: center;
     margin-bottom: 4px;
+    transition: .35s;
+    &:hover {
+      color:$secondary1;
+      transition: .35s;
+    }
   }
   &__contacts_icon {
     min-width: 12px;
@@ -478,28 +479,25 @@
     width: 22px;
     height: 17px;
   }
+  &__contacts_item_site {
+    align-items: flex-start;
+  }
 }
 
-@media screen and (max-width: 890.5px) {
+@media screen and (max-width: 1250.5px) {
   //.recommend__wrapper {
   //  justify-content: space-around;
   //}
   .recommend__item {
-    //box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
-    //margin-bottom: 32px;
-    //width: 45%;
-    //margin-right: 0;
-    &:nth-child(3n) {
-      //margin-right: 0;
+    height: auto;
     }
   }
-}
 @media screen and (max-width: 727.5px){
    .recommend__slider_button_wrap {
      width: 67px;
      display: flex;
      justify-content: space-between;
-     margin: 0 auto;
+     margin: 32px auto 0;
    }
   .recommend__container {
     padding: 16px;

@@ -224,7 +224,7 @@
                 <div class="swiper-container location__swiper-container">
                     <div class="swiper-wrapper location__swiper-wrapper">
                         <div class="swiper-slide location__swiper-slide">
-                            <a class="location__swiper-slide-link" href="../img/location/slider/slide1.jpg" data-fancybox="">
+                            <a class="location__swiper-slide-link" href="../img/location/slider/slide1.jpg" data-fancybox="location">
                                 <img src="../img/location/slider/slide1.jpg" alt="slide">
                             </a>
                         </div>
@@ -452,42 +452,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            <tr class="table__body_row">
-                                <td class="table__body_item table__body_item-time">
-                                    09:00 - ...
-                                </td>
-                                <td class="table__body_item table__body_item-event">
-                                    Cheсk-in в гостиницу и заселение
-                                </td>
-                                <td class="table__body_item">
-                                    <a href="#popup-map" data-fancybox="" class="table__link">
-                                        <div class="table__icon">
-                                            <img src="../img/location/location-icon.svg" alt="icon">
-                                        </div>
-                                        <p class="table__address TextH1">
-                                            Swissotel «Камелия»
-                                        </p>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr class="table__body_row">
-                                <td class="table__body_item table__body_item-time">
-                                    19:00 - 23:00
-                                </td>
-                                <td class="table__body_item table__body_item-event">
-                                    Welcome-ужин
-                                </td>
-                                <td>
-                                    <a href="#popup-map" class="table__link" data-fancybox="">
-                                        <div class="table__icon">
-                                            <img src="../img/location/location-icon.svg" alt="icon">
-                                        </div>
-                                        <p class="table__address">
-                                            Swissotel «Камелия»
-                                        </p>
-                                    </a>
-                                </td>
-                            </tr>
+
                             </tbody>
                         </table>
                     </div>
@@ -605,6 +570,17 @@
                                         Мискуй пользу и вкус. Освежи мозги здоровой едой и напитками.
                                     </p>
                                     <ul class="recommend__contacts">
+                                        <li class="recommend__contacts_item recommend__contacts_item_site">
+                                            <div class="recommend__contacts_icon">
+                                                <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
+                                            </div>
+                                            <div class="recommend__contacts_item_link_wrap">
+                                                <p>Сайт</p>
+                                                <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                                    www.freshbarblender.com
+                                                </a>
+                                            </div>
+                                        </li>
                                         <li class="recommend__contacts_item">
                                             <div class="recommend__contacts_icon">
                                                 <img src="../img/recommend/recommend-location-icon.svg" alt="icon">
@@ -621,13 +597,16 @@
                                                 +7 (999) 999 99-99
                                             </a>
                                         </li>
-                                        <li class="recommend__contacts_item">
+                                        <li class="recommend__contacts_item recommend__contacts_item_site">
                                             <div class="recommend__contacts_icon">
                                                 <img src="../img/recommend/recommend-phone-icon.svg" alt="icon">
                                             </div>
-                                            <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
-                                                www.freshbarblender.com
-                                            </a>
+                                            <div class="recommend__contacts_item_link_wrap">
+                                                <p>Сайт</p>
+                                                <a href="www.freshbarblender.com" class="recommend__contacts_text recommend__contacts_link TextVerySmall">
+                                                    www.freshbarblender.com
+                                                </a>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
@@ -920,9 +899,9 @@
     </div>
 </footer>
 
-</div>
 
-</footer>
+
+
 <div class="d-none">
     <form id="popup-form">
         <div class="popup-form">
@@ -946,8 +925,6 @@
         </div>
     </div>
 </div>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=d064a90f-98df-42af-a585-f6674d7e3270&lang=ru_RU" type="text/javascript">
-</script>
 <script src="js/scripts.min.js"></script>
 <script src="js/bundle.min.js"></script>
 
