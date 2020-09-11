@@ -12,6 +12,12 @@
 		<!-- <p class="main-screen__form_description TextP">
 			Как прокачать скилл? Участвуй во всех активностях, присылай доказательства выполнения заданий в Telegram и получай баллы. Награда ждёт тебя!
 		</p> -->
+		<button 
+			class="main-screen__form_btn btn TextP"
+			@click.prevent="getContent"	
+		>
+			Что дальше?
+		</button>
 		<ul class="main-screen__form_links">
 			<!-- <li class="main-screen__form_link main-screen__telegram">
 				Скачать Telegram
@@ -27,12 +33,6 @@
 				</a>
 			</li>
 		</ul>
-		<button 
-			class="main-screen__form_btn btn TextP"
-			@click.prevent="getContent"	
-		>
-			Что дальше?
-		</button>
 	</div>
 </template>
 
