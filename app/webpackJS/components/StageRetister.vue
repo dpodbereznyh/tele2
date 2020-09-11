@@ -8,6 +8,8 @@
 			<input type="text" name="name" placeholder="Имя" required class="main-screen__form_input main-screen__form_input-second">
 			<input type="email" name="email" placeholder="Email" required class="main-screen__form_input main-screen__form_input-second">
 			<input type="text" name="city" placeholder="Город" required class="main-screen__form_input">
+			<input type="text" name="clothes_size" placeholder="Размер одежды" required class="main-screen__form_input main-screen__form_input-second">
+			<input type="text" name="shoe_size" placeholder="Размер обуви" required class="main-screen__form_input main-screen__form_input-second">
 			<button type="submit" class="main-screen__form_btn btn TextP">
 				Регистрация
 			</button>
@@ -37,6 +39,5 @@
 	}
 </script>
 
-<style>
-
+<style scope>
 </style>
