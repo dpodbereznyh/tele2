@@ -228,6 +228,7 @@ function initSliders () {
 			wrapperClass: 'table__wrapper',
 			slidesPerView: 1,
 			threshold: 4,
+			autoHeight: true,
 			// navigation: {
 			// 	nextEl: '.date__button-next',
 			// 	prevEl: '.date__button-prev',
