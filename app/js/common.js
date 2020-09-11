@@ -234,10 +234,10 @@ function initSliders () {
 			// controller: {
 			// 	control: dateSlider,
 			// },
-			navigation: {
-				nextEl: '.date__button-next',
-				prevEl: '.date__button-prev',
-			},
+			// navigation: {
+			// 	nextEl: '.date__button-next',
+			// 	prevEl: '.date__button-prev',
+			// },
 
 			// thumbs: {
 			//     swiper: {
