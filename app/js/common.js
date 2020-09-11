@@ -207,6 +207,7 @@ function initSliders () {
 			slidesPerView: 1,
 			autoHeight: true,
 			threshold: 4,
+			autoHeight: true,
 			// navigation: {
 			// 	nextEl: '.date__button-next',
 			// 	prevEl: '.date__button-prev',

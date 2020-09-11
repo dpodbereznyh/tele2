@@ -200,7 +200,9 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    line-height: 45px;
+	line-height: 45px;
+	
+	
   }
   &__body_item-event {
     font-family: "Tele2TextSans-Regular", sans-serif;
@@ -209,6 +211,13 @@
     font-size: 32px;
     line-height: 45px;
     padding-right: 10px;
+  }
+  @media (min-width: 900.5px) {
+	&__body_item-time,
+	&__body_item-event {
+		vertical-align: top;
+	}
+
   }
   &__title_time {
     width: 28%;
