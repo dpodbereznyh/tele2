@@ -194,9 +194,6 @@ function initSliders () {
 			wrapperClass: 'date__wrapper',
 			slidesPerView: 1,
 			threshold: 4,
-			// controller: {
-			// 	control: tableSlider,
-			// },
 			navigation: {
 				nextEl: '.date__button-next',
 				prevEl: '.date__button-prev',
@@ -210,13 +207,10 @@ function initSliders () {
 			slidesPerView: 1,
 			autoHeight: true,
 			threshold: 4,
-			// controller: {
-			// 	control: dateSlider,
+			// navigation: {
+			// 	nextEl: '.date__button-next',
+			// 	prevEl: '.date__button-prev',
 			// },
-			navigation: {
-				nextEl: '.date__button-next',
-				prevEl: '.date__button-prev',
-			},
 
 			// thumbs: {
 			//     swiper: {
