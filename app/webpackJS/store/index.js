@@ -8,7 +8,7 @@ const store = new Vuex.Store({
 	state: {
 		stage: 1,
 		user: {},
-		answers: {},
+		answers: [],
 		skill: '',
 		specialAnswers: {},
 	},
@@ -19,6 +19,7 @@ const store = new Vuex.Store({
 		answers: (state) => state.answers,
 		skill: (state) => state.skill,
 		specialAnswers: (state) => state.specialAnswers,
+		user: (state) => state.user,
 	},
 
 	mutations: {
@@ -28,14 +29,17 @@ const store = new Vuex.Store({
 		ADD_USER_FIELD (state, { key, value }) {
 			Vue.set(state.user, key, value);
 		},
-		ADD_ANSWER (state, { key, value }) {
-			Vue.set(state.answers, key, value);
+		ADD_ANSWER (state, answer) {
+			state.answers.push(answer);
 		},
 		ADD_SPECIAL_ANSWER (state, { key, value }) {
 			Vue.set(state.specialAnswers, key, value);
 		},
 		SET_SKILL (state, value) {
 			state.skill = value;
+		},
+		SET_USER (state, user) {
+			Vue.set(state, 'user', user);
 		},
 	},
 
@@ -49,11 +53,8 @@ const store = new Vuex.Store({
 				value,
 			});
 		},
-		addAnswer ({ commit }, { key, value }) {
-			commit('ADD_ANSWER', {
-				key,
-				value,
-			});
+		addAnswer ({ commit }, answer) {
+			commit('ADD_ANSWER', answer);
 		},
 		addSpecialAnswer ({ commit }, { key, value }) {
 			commit('ADD_SPECIAL_ANSWER', {
@@ -63,6 +64,9 @@ const store = new Vuex.Store({
 		},
 		setSkill ({ commit }, value) {
 			commit('SET_SKILL', value);
+		},
+		setUser ({ commit }, user) {
+			commit('SET_USER', user);
 		},
 	},
 });

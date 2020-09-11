@@ -1,21 +1,21 @@
 <template>
 	<div class="main-screen__form_final">
 		<p class="main-screen__form_final_title DisplayH6">
-			Спасибо за регистрацию,<br> {{ user.name }}! Твой скилл:
+			Спасибо за регистрацию,<br> {{ user.name }}!
 		</p>
-		<p class="main-screen__form_final_skill StencilH5">
+		<!-- <p class="main-screen__form_final_skill StencilH5">
 			{{ skill }}
-		</p>
+		</p> -->
 		<p class="main-screen__form_description TextP">
-			Прокачивай его на конференции, но не забывай про остальные навыки. За развитие своего скилла ты получаешь двойной бонус.
+			Скоро ты узнаешь скилл, который будешь прокачивать на конференции, а пока скачивай Telegram. Самую важную информацию ты будешь получать именно там.
 		</p>
-		<p class="main-screen__form_description TextP">
+		<!-- <p class="main-screen__form_description TextP">
 			Как прокачать скилл? Участвуй во всех активностях, присылай доказательства выполнения заданий в Telegram и получай баллы. Награда ждёт тебя!
-		</p>
+		</p> -->
 		<ul class="main-screen__form_links">
-			<li class="main-screen__form_link main-screen__telegram">
+			<!-- <li class="main-screen__form_link main-screen__telegram">
 				Скачать Telegram
-			</li>
+			</li> -->
 			<li class="main-screen__form_link main-screen__google-play">
 				<a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" target="_blank" rel="noopener noreferrer nofollow">
 					<img src="/assets/app/img/main-screen/main-screen-form/google-play.svg" alt="image">
