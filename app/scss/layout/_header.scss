@@ -313,7 +313,7 @@
   }
   &__form_btn {
     border: none;
-    margin: 0 auto;
+    margin: 0 auto 32px;
   }
   &__form_second {
     display: flex;
@@ -404,11 +404,11 @@
     }
   }
   &__google-play {
-    max-width: 132px;
+    width: 48%;
     order: 1;
   }
   &__app-store {
-    max-width: 124px;
+    width: 48%;
   }
   &__telegram {
 	color: #ffffff;
@@ -455,14 +455,14 @@
     flex-wrap: wrap;
   }
   .main-screen__google-play {
-    max-width: 132px;
+
     order: 2;
   }
   .main-screen__telegram {
     order: 1;
   }
   .main-screen__telegram {
-    width: 100%;
+
     margin-bottom: 16px;
   }
 }

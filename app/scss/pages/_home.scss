@@ -220,13 +220,13 @@
 
   }
   &__title_time {
-    width: 28%;
+    width: 27%;
   }
   &__title_event {
     width: 44%;
   }
   &__title_location {
-    width: 27%;
+    width: 29%;
   }
   &__link {
     display: flex;
@@ -533,6 +533,15 @@
     margin-bottom: 32px;
     background: $dark;
     transition: .5s;
+    a {
+      color: $dark;
+      transition: .35s;
+      text-decoration-line: underline;
+      &:hover {
+        color: $light;
+        transition: .35s;
+      }
+    }
   }
   &__item-active {
     background: $secondary1;
