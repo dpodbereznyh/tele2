@@ -303,7 +303,7 @@ var initYotubeThings = function() {
 
 		y.onclick = function () {
 			var a = document.createElement("iframe");
-			a.setAttribute("src", "https://youtu.be/bwJ7f6UPkgs" + this.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&rel=0");
+			a.setAttribute("src", "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&rel=0");
 			a.setAttribute('allow', 'autoplay; fullscreen');
 			a.style.width = this.style.width;
 			a.style.height = this.style.height;
