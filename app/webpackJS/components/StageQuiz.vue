@@ -27,6 +27,7 @@
 				v-for="(item, index) in questions[activeQuestion].answers"
 				:key="index"
 				:for="`answer:${index}`"
+				:class="{ active: isActive(index)}"
 			>
 				<input
 					:id="`answer:${index}`"
@@ -35,6 +36,7 @@
 					class="main-screen__form_questions_input"
 					v-model="currentAnswer"
 					:value="item"
+					@change="setActiveAnswer(index)"
 				>
 				<span>{{ item }}</span>
 			</label>
@@ -56,6 +58,7 @@
 			return {
 				activeQuestion: 1,
 				currentAnswer: '',
+				currentAnswerId: '',
 				questions: {
 					1: {
 						title: 'Выбери, что тебе ближе:',
@@ -219,6 +222,12 @@
 				}
 				
 			},
+			setActiveAnswer(index){
+				this.currentAnswerId = index;
+			},
+			isActive(index){
+				return this.currentAnswerId === index;
+			}
 		},
 	}
 </script>
