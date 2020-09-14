@@ -1,4 +1,5 @@
 window.$apimedia = {};
+$.fancybox.defaults.backFocus = false;
 
 function initInputMasks () {
 	$('[data-api-input-mask="phone"]').inputmask({
@@ -239,6 +240,7 @@ function initSliders () {
 		slideClass: 'recommend__item',
 		wrapperClass: 'recommend__wrapper',
 		slidesPerView: 3,
+		loop: true,
 		// spaceBetween: 36,
 		navigation: {
 			nextEl: '.recommend__button-next',
@@ -312,7 +314,6 @@ $(document).ready(function () {
 function initAllComponents () {
 	initStuff();
 	initSliders();
-	mobileSlider();
 };
 
 

@@ -380,6 +380,10 @@
     color: $dark;
     cursor: pointer;
     transition: .35s;
+    &.activeAnswer {
+      background: $secondary1;
+      color: $dark;
+    }
     &:hover {
       background: $secondary1;
       transition: .35s;
@@ -491,4 +495,5 @@
     margin-bottom: 16px;
   }
 }
+
 /*****Main-Screen End*****/
