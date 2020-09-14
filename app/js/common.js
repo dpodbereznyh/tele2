@@ -1,4 +1,5 @@
 window.$apimedia = {};
+$.fancybox.defaults.backFocus = false;
 
 function initInputMasks () {
 	$('[data-api-input-mask="phone"]').inputmask({
