@@ -110,7 +110,6 @@ function initStuff () {
 		headIndex: '0',
 
 	});
-
 	// FAQ
 	$('.faq__item_head').click(function () {
 		$(this).next().slideToggle(500);
@@ -119,10 +118,6 @@ function initStuff () {
 		$(this).find('.icon-faq-arrow').toggleClass('icon-faq-arrow-active');
 
 	});
-
-
-
-
 
 	$(document).on('click', '.js-scroll-content', function () {
 		var target = document.querySelector('.move');
@@ -192,7 +187,6 @@ function initSliders () {
 		var speakersSlider = new Swiper ('.speakers__swiper-container', {
 			slideClass: 'speakers__slide',
 			wrapperClass: 'speakers__wrapper',
-			loop: true,
 			slidesPerView: 3,
 			spaceBetween: 32,
 			navigation: {
@@ -245,8 +239,7 @@ function initSliders () {
 		slideClass: 'recommend__item',
 		wrapperClass: 'recommend__wrapper',
 		slidesPerView: 3,
-		spaceBetween: 32,
-		loop: true,
+		// spaceBetween: 36,
 		navigation: {
 			nextEl: '.recommend__button-next',
 			prevEl: '.recommend__button-prev',
@@ -258,11 +251,11 @@ function initSliders () {
 			},
 			728: {
 				slidesPerView: 2,
-				spaceBetween: 32
+				spaceBetween: 38
 			},
 			1000: {
 				slidesPerView: 3,
-				spaceBetween: 32
+				spaceBetween: 38
 			}
 
 		}
@@ -314,7 +307,6 @@ var initYotubeThings = function() {
 $(document).ready(function () {
 	initYotubeThings();
 });
-
 
 // Здесь все, что потом необходимо запустить после подгрузки контента с сервера
 function initAllComponents () {

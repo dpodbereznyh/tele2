@@ -441,8 +441,9 @@
     order: 2;
   }
 }
-.main-screen__form_questions_label>input:checked+span {
-  color: $secondary2;
+.main-screen__form_questions_input:checked  {
+  background: $secondary1;
+  transition: .35s;
 }
 .purple {
   color: $secondary3;
