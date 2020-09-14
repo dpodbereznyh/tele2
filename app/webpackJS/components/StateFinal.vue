@@ -24,7 +24,7 @@
 			</li> -->
 			<li class="main-screen__form_link main-screen__google-play">
 				<a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" target="_blank" rel="noopener noreferrer nofollow">
-					<img src="/assets/app/img/main-screen/main-screen-form/google-play.svg" alt="image">
+					<img src="/assets/app/img/main-screen/main-screen-form/google-play-badge.png" alt="image">
 				</a>
 			</li>
 			<li class="main-screen__form_link main-screen__app-store order-3">

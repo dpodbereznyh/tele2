@@ -144,6 +144,9 @@
   //margin-bottom: 64px;
   &__description {
     margin-bottom: 32px;
+    span {
+      color: $dark_5;
+    }
   }
 }
 .date {
@@ -434,16 +437,23 @@
 /*****Speakers End*****/
 /*****Recommend*****/
 .recommend {
+  &-slider {
+    position: relative;
+  }
+  &__wrapper {
+    padding: 0 7px;
+  }
   &__container {
     padding: 25px;
   }
   &__item {
-    box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 14px rgba(0,0,0,.15);
     margin-top: 0!important;
     margin-bottom: 32px;
     height: 780px;
   }
-  &__item_wrap {
+  &__item_image {
+    padding: 32px;
 
   }
   &__item_desc_wrap {
@@ -481,15 +491,44 @@
       transition: .35s;
     }
   }
-  &__slider_button_wrap {
-    display: none;
-  }
   &__slider_button {
-    width: 22px;
-    height: 17px;
+    width: 40px;
+    height: 51px;
+    position: absolute;
+    top: 50%;
+    outline: none;
+    cursor: pointer;
+    span {
+      font-size: 60px;
+    }
+  }
+  &__button-prev {
+    left: -2%;
+    transform: translate(-100%, -50%);
+    z-index: 2;
+  }
+  &__button-next {
+    right: -2%;
+    transform: translate(100%, -50%);
+    z-index: 2;
   }
   &__contacts_item_site {
     align-items: flex-start;
+  }
+}
+@media screen and (max-width: 1406.5px) {
+  .recommend__slider_button {
+    top: 100%;
+  }
+  .recommend__button-prev {
+    left: 50%;
+    transform: translate(-300%, 0);
+    z-index: 2;
+  }
+  .recommend__button-next {
+    right: 50%;
+    transform: translate(300%, 0);
+    z-index: 2;
   }
 }
 
@@ -511,8 +550,20 @@
   .recommend__container {
     padding: 16px;
   }
-  .recommend__item {
-    box-shadow: 0 4px 14px rgba(0,0,0,.15);
+}
+@media screen and (max-width: 640.5px) {
+  .recommend__slider_button {
+    width: 18px;
+    height: 22px;
+  }
+  .recommend__slider_button span {
+    font-size: 27px;
+  }
+  .recommend__button-prev {
+    transform: translate(-200%, 0);
+  }
+  .recommend__button-next {
+    transform: translate(200%, 0);
   }
 }
 //@include media-breakpoint-down(xs) {
