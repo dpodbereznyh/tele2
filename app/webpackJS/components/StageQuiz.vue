@@ -190,6 +190,7 @@
 				if (this.activeQuestion !== Object.keys(this.questions).length) {
 					this.activeQuestion += 1;
 					this.currentAnswer = '';
+					this.currentAnswerId = '';					
 				} else {
 					// Regiser
 					const params = {
