@@ -121,7 +121,7 @@
     display: none;
   }
   .location__nav {
-    padding: 16px;
+    padding: 16px 0;
   }
   .location__swiper-container {
     margin-bottom: 0;
@@ -371,10 +371,12 @@
   &__slide_title {
     margin-bottom: 8px;
     color: $dark;
+    text-align: center;
   }
   &__slide_description {
     margin-bottom: 16px;
     color: $secondary1;
+    text-align: center;
   }
   &__slide_btn {
     margin: 0 auto;

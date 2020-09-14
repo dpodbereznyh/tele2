@@ -192,6 +192,7 @@ function initSliders () {
 		var speakersSlider = new Swiper ('.speakers__swiper-container', {
 			slideClass: 'speakers__slide',
 			wrapperClass: 'speakers__wrapper',
+			loop: true,
 			slidesPerView: 3,
 			spaceBetween: 32,
 			navigation: {
@@ -245,6 +246,7 @@ function initSliders () {
 		wrapperClass: 'recommend__wrapper',
 		slidesPerView: 3,
 		spaceBetween: 32,
+		loop: true,
 		navigation: {
 			nextEl: '.recommend__button-next',
 			prevEl: '.recommend__button-prev',
