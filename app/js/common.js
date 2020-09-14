@@ -319,7 +319,6 @@ $(document).ready(function () {
 function initAllComponents () {
 	initStuff();
 	initSliders();
-	mobileSlider();
 };
 
 
