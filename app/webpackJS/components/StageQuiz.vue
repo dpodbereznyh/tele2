@@ -27,7 +27,7 @@
 				v-for="(item, index) in questions[activeQuestion].answers"
 				:key="index"
 				:for="`answer:${index}`"
-				:class="{ active: isActive(index)}"
+				:class="{ activeAnswer: isActive(index)}"
 			>
 				<input
 					:id="`answer:${index}`"
