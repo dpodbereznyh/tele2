@@ -190,6 +190,7 @@ function initSliders () {
 			wrapperClass: 'speakers__wrapper',
 			slidesPerView: 3,
 			spaceBetween: 32,
+			loope: true,
 			navigation: {
 				nextEl: '.speakers__button-next',
 				prevEl: '.speakers__button-prev',
@@ -241,7 +242,6 @@ function initSliders () {
 		wrapperClass: 'recommend__wrapper',
 		slidesPerView: 3,
 		loop: true,
-		// spaceBetween: 36,
 		navigation: {
 			nextEl: '.recommend__button-next',
 			prevEl: '.recommend__button-prev',
