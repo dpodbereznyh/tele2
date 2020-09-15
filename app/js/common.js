@@ -190,7 +190,7 @@ function initSliders () {
 			wrapperClass: 'speakers__wrapper',
 			slidesPerView: 3,
 			spaceBetween: 32,
-			loope: true,
+			loop: true,
 			navigation: {
 				nextEl: '.speakers__button-next',
 				prevEl: '.speakers__button-prev',
