@@ -82,12 +82,10 @@ function initStuff () {
 	});
 
 
-	// $(".js-callback").on( "click", function() {
-	//     var newtitle = $(this).attr("data-title");
-	//     var newinput = $(this).attr("data-input");
-	//     $(".js-title").html(newtitle);
-	//     $(".js-zakaz").val(newinput);
-	// });
+	$(".js-callback").on( "click", function() {
+	    var newinput = $(this).siblings(".speakers__slide_title").html();
+		$(".js-speaker").val(newinput);
+	});
 
 
 	$("#popup-form").submit(function(){

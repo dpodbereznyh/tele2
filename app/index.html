@@ -481,7 +481,7 @@
                                 <p class="speakers__slide_description DisplaySmall">
                                     Развитие В2В
                                 </p>
-                                <a href="#popup-form" class="speakers__slide_btn btn TextP" data-fancybox>
+                                <a href="#popup-form" class="speakers__slide_btn btn TextP js-callback" data-fancybox>
                                     Задать вопрос
                                 </a>
                             </div>
@@ -900,6 +900,8 @@
 
 <div class="d-none">
     <form id="popup-form">
+        <input class="js-speaker" type="hidden" value="" name="speaker" required="">
+
         <div class="popup-form">
             <p class="popup-form-title DisplaySmall">
                 Твой вопрос

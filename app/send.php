@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 require (__DIR__.'/php_mailer/Exception.php');
 require (__DIR__.'/php_mailer/PHPMailer.php');
 require (__DIR__.'/php_mailer/SMTP.php');
-$recipient_mail1 = "th@apimedia.ru";
+$recipient_mail1 = "teh@apimedia.ru";
 
 $mail = new PHPMailer;
 try {
@@ -41,6 +41,9 @@ if (isset($_POST['messege'])) {
 
 if (isset($_POST['title'])) {
 	$message .= "Заголовок: ".$_POST['title']."<br />";
+}
+if (isset($_POST['speaker'])) {
+	$message .= "Вопрос для спикера: ".$_POST['speaker']."<br />";
 }
 
 
